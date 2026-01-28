@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Clínica Veterinária 24h | Pet Shop Morada dos Pássaros - Jardim Rosana</title>
+    <meta name="description" content="Clínica Veterinária 24 horas no Jardim Rosana. Consultas, emergências, vacinas, exames e cirurgias. Atendimento com amor e profissionalismo.">
+    <meta name="keywords" content="clínica veterinária, veterinário 24h, emergência veterinária, vacinação, castração, exames, cirurgia veterinária, Jardim Rosana, veterinário de confiança">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Clínica Veterinária 24h | Morada dos Pássaros">
+    <meta property="og:description" content="Atendimento veterinário 24 horas, consultas, emergências e exames. Seu pet em boas mãos no Jardim Rosana. WhatsApp (11) 99189-5580">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1596276020587-43af4926e6e9?auto=format&fit=crop&q=80&w=1200">
+    
+    <link rel="icon" type="image/png" href="logo.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VeterinaryCare",
+        "name": "Clínica Veterinária Morada dos Pássaros",
+        "description": "Clínica veterinária 24 horas com atendimento emergencial, consultas, vacinação, exames e cirurgias no Jardim Rosana, São Paulo.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Carlos Lacerda, 1758",
+            "addressLocality": "Jardim Rosana, São Paulo",
+            "addressRegion": "SP",
+            "postalCode": "05789-001",
+            "addressCountry": "BR"
+        },
+        "openingHours": "Mo-Su 00:00-23:59",
+        "telephone": "+5511991895580",
+        "medicalSpecialty": [
+            "Emergency",
+            "General Practice",
+            "Surgery",
+            "Dentistry",
+            "Dermatology"
+        ],
+        "priceRange": "$$",
+        "currenciesAccepted": "BRL"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-primary: #F97316;    
+            --brand-secondary: #EF4444;  
+            --brand-accent: #EAB308;     
+            --brand-success: #25D366;
+            --brand-medical: #3B82F6;
+            --bg-soft: #FFF7ED;          
+            --text-primary: #334155;     
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            line-height: 1.6;
+            background-color: var(--bg-soft);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6, .font-heading {
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+        }
+
+        .section-padding {
+            padding: 5rem 1rem;
+        }
+        
+        @media (min-width: 768px) {
+            .section-padding {
+                padding: 7rem 1rem;
+            }
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(59, 130, 246, 0.15);
+            border-color: var(--brand-medical);
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .animate-blob {
+            animation: blob 7s infinite;
+        }
+        
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        
+        .animation-delay-2000 {
+            animation-delay: 2s;
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 2px solid rgba(59, 130, 246, 0.1);
+        }
+
+        .lgpd-slide-up {
+            animation: slideUp 0.5s ease-out forwards;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .emergency-pulse {
+            animation: emergencyPulse 1.5s infinite;
+        }
+        
+        @keyframes emergencyPulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(239, 68, 68, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        }
+        
+        .medical-card {
+            border-left: 4px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .medical-card:hover {
+            border-left-color: var(--brand-medical);
+        }
+        
+        .stethoscope-spin {
+            animation: stethoscopeSpin 20s linear infinite;
+        }
+        
+        @keyframes stethoscopeSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-500 text-white px-4 py-3 rounded-lg z-50 font-bold">Pular para conteúdo principal</a>
+
+    <nav class="fixed w-full glass-effect shadow-sm z-40" aria-label="Navegação principal">
+        <div class="max-w-7xl mx-auto px-4 lg:px-8 h-24 flex justify-between items-center">
+            
+            <a href="index.html" class="flex items-center gap-3 group">
+                <img src="logo.png" alt="Logo Morada dos Pássaros" class="h-16 w-auto object-contain transition-transform group-hover:scale-105">
+                <div class="leading-tight hidden sm:block">
+                    <div class="font-heading font-bold text-xl text-slate-800">Morada dos Pássaros</div>
+                    <div class="text-xs text-blue-600 font-bold tracking-widest uppercase">Pet Shop & Vet</div>
+                </div>
+            </a>
+            
+            <div class="hidden lg:flex space-x-8 font-bold text-sm tracking-wider uppercase items-center">
+                <a href="index.html#sobre" class="text-slate-600 hover:text-blue-500 transition-colors font-heading">Sobre Nós</a>
+                <a href="index.html#servicos" class="text-slate-600 hover:text-blue-500 transition-colors font-heading">Serviços</a>
+                <a href="clinica.html" class="text-blue-600 font-heading">Clínica</a>
+                <a href="index.html#produtos" class="text-slate-600 hover:text-blue-500 transition-colors font-heading">Produtos</a>
+                <a href="index.html#depoimentos" class="text-slate-600 hover:text-blue-500 transition-colors font-heading">Depoimentos</a>
+                <a href="https://wa.me/5511991895580?text=Olá! Preciso de atendimento veterinário para meu pet." 
+                   class="bg-[#25D366] text-white px-6 py-3 rounded-full hover:bg-green-600 transition-all duration-300 shadow-lg hover:shadow-green-500/30 flex items-center gap-2 transform hover:-translate-y-1 normal-case">
+                   <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                   <span>Emergência</span>
+                </a>
+            </div>
+            
+            <button id="hamburguer" class="lg:hidden p-2 rounded-xl text-blue-500 hover:bg-blue-50 transition-colors" aria-label="Abrir menu">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-blue-100 px-6 py-6 space-y-4 shadow-xl absolute w-full" role="menu">
+            <a href="index.html#sobre" class="block py-3 font-bold text-sm uppercase tracking-wider text-slate-700 border-b border-gray-50">Sobre Nós</a>
+            <a href="index.html#servicos" class="block py-3 font-bold text-sm uppercase tracking-wider text-slate-700 border-b border-gray-50">Serviços</a>
+            <a href="clinica.html" class="block py-3 font-bold text-sm uppercase tracking-wider text-blue-600 border-b border-gray-50">Clínica Veterinária</a>
+            <a href="index.html#produtos" class="block py-3 font-bold text-sm uppercase tracking-wider text-slate-700 border-b border-gray-50">Produtos</a>
+            <a href="index.html#depoimentos" class="block py-3 font-bold text-sm uppercase tracking-wider text-slate-700 border-b border-gray-50">Depoimentos</a>
+            <a href="https://wa.me/5511991895580?text=Olá! Preciso de atendimento veterinário urgente." 
+               class="block w-full text-center bg-[#25D366] text-white py-4 rounded-xl font-bold mt-4 shadow-md flex items-center justify-center gap-2">
+               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+               Emergência Veterinária
+            </a>
+        </div>
+    </nav>
+
+    <main id="main-content">
+        
+        <!-- Hero Section Clínica Veterinária -->
+        <section class="pt-36 pb-20 px-4 relative overflow-hidden bg-gradient-to-br from-blue-50 to-white">
+            <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
+            <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-indigo-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
+            
+            <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
+                <div class="text-center lg:text-left space-y-8">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-tight">
+                        Clínica Veterinária<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-indigo-600">24 horas de cuidado</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-medium">
+                        Emergência, consultas, exames e cirurgias. <strong class="text-blue-600">Atendimento 24h</strong> no Jardim Rosana com profissionais especializados e equipamentos de última geração.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="tel:+5511991895580" 
+                           class="bg-gradient-to-r from-red-500 to-red-600 text-white text-lg px-8 py-4 rounded-full font-bold shadow-xl hover:shadow-red-500/40 transition-all duration-300 text-center transform hover:-translate-y-1 flex items-center justify-center gap-3 emergency-pulse">
+                            🚑 Emergência 24h
+                        </a>
+                        <a href="https://wa.me/5511991895580?text=Olá! Gostaria de agendar uma consulta veterinária." 
+                           class="bg-white border-2 border-blue-400 text-blue-600 text-lg px-8 py-4 rounded-full font-bold hover:bg-blue-50 transition-all duration-300 text-center flex items-center justify-center gap-2">
+                            🩺 Agendar Consulta
+                        </a>
+                    </div>
+
+                    <div class="flex items-center justify-center lg:justify-start gap-6 pt-4 flex-wrap">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                            <span class="text-sm font-medium">Plantão 24 horas</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                            <span class="text-sm font-medium">Equipamentos modernos</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 bg-green-500 rounded-full"></span>
+                            <span class="text-sm font-medium">Profissionais especializados</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative float-animation">
+                    <div class="relative z-10 p-2 bg-white rounded-[3rem] shadow-2xl">
+                        <img src="clinica.png" 
+                             alt="Veterinária examinando cachorro" 
+                             class="rounded-[2.5rem] w-full h-auto object-cover" loading="eager">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-blue-500 text-white p-4 rounded-2xl shadow-lg rotate-[-6deg] z-20">
+                        <span class="text-xl font-bold">🏥 Clínica Veterinária</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviços Veterinários -->
+        <section class="section-padding bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">Nossos Serviços</span>
+                    <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 mt-4 mb-6">Cuidado veterinário<br>completo e humanizado</h2>
+                    <p class="text-lg text-slate-600 max-w-3xl mx-auto">Da consulta de rotina à emergência mais complexa, estamos preparados para cuidar da saúde do seu pet.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <div class="bg-blue-50 p-8 rounded-3xl hover:bg-white card-hover group medical-card">
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 text-4xl shadow-sm group-hover:scale-110 transition-transform">
+                            🩺
+                        </div>
+                        <h3 class="font-bold text-2xl text-slate-900 mb-4">Consultas e Check-ups</h3>
+                        <p class="text-slate-600 mb-6">Avaliação completa da saúde do seu pet, diagnóstico precoce e prevenção de doenças. Inclui orientações nutricionais e de cuidados.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-blue-600 font-bold text-lg">A partir de R$ 120</span>
+                            <a href="https://wa.me/5511991895580" class="text-blue-600 font-bold hover:underline">Agendar →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-red-50 p-8 rounded-3xl hover:bg-white card-hover group medical-card popular">
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 text-4xl shadow-sm group-hover:scale-110 transition-transform">
+                            🚨
+                        </div>
+                        <h3 class="font-bold text-2xl text-slate-900 mb-4">Emergência 24h</h3>
+                        <p class="text-slate-600 mb-6">Atendimento veterinário de emergência 24 horas por dia, 7 dias por semana. Pronto para qualquer urgência, dia ou noite.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-red-600 font-bold text-lg">Plantão 24h</span>
+                            <a href="tel:+5511991895580" class="text-red-600 font-bold hover:underline">Ligar Agora →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-green-50 p-8 rounded-3xl hover:bg-white card-hover group medical-card">
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 text-4xl shadow-sm group-hover:scale-110 transition-transform">
+                            💉
+                        </div>
+                        <h3 class="font-bold text-2xl text-slate-900 mb-4">Vacinação</h3>
+                        <p class="text-slate-600 mb-6">Protocolo completo de vacinação para cães e gatos. Mantenha seu pet protegido contra as principais doenças infecciosas.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-green-600 font-bold text-lg">A partir de R$ 60</span>
+                            <a href="https://wa.me/5511991895580" class="text-green-600 font-bold hover:underline">Agendar →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-purple-50 p-8 rounded-3xl hover:bg-white card-hover group medical-card">
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 text-4xl shadow-sm group-hover:scale-110 transition-transform">
+                            🔬
+                        </div>
+                        <h3 class="font-bold text-2xl text-slate-900 mb-4">Exames Laboratoriais</h3>
+                        <p class="text-slate-600 mb-6">Hemograma, bioquímico, urinálise, parasitológico e exames de imagem (raio-x, ultrassom). Diagnóstico preciso e rápido.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-purple-600 font-bold text-lg">Consulte valores</span>
+                            <a href="https://wa.me/5511991895580" class="text-purple-600 font-bold hover:underline">Saber mais →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-indigo-50 p-8 rounded-3xl hover:bg-white card-hover group medical-card">
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 text-4xl shadow-sm group-hover:scale-110 transition-transform">
+                            ✂️
+                        </div>
+                        <h3 class="font-bold text-2xl text-slate-900 mb-4">Cirurgias</h3>
+                        <p class="text-slate-600 mb-6">Castração, procedimentos ortopédicos, remoção de tumores e outras cirurgias. Centro cirúrgico equipado e monitoramento pós-operatório.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-indigo-600 font-bold text-lg">Orçamento personalizado</span>
+                            <a href="https://wa.me/5511991895580" class="text-indigo-600 font-bold hover:underline">Consultar →</a>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-cyan-50 p-8 rounded-3xl hover:bg-white card-hover group medical-card">
+                        <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 text-4xl shadow-sm group-hover:scale-110 transition-transform">
+                            🦷
+                        </div>
+                        <h3 class="font-bold text-2xl text-slate-900 mb-4">Odontologia Veterinária</h3>
+                        <p class="text-slate-600 mb-6">Limpeza de tártaro, extrações, tratamento de gengivite e orientação sobre higiene bucal. Sorriso saudável para seu pet.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-cyan-600 font-bold text-lg">A partir de R$ 180</span>
+                            <a href="https://wa.me/5511991895580" class="text-cyan-600 font-bold hover:underline">Agendar →</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-3xl p-8 md:p-12 text-white text-center">
+                    <h3 class="text-2xl md:text-3xl font-bold mb-4">Pacote Preventivo Anual</h3>
+                    <p class="text-lg opacity-90 mb-6 max-w-2xl mx-auto">Cuide da saúde do seu pet o ano inteiro com nosso pacote completo de prevenção</p>
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                        <div class="text-center">
+                            <span class="text-blue-200 line-through text-xl">R$ 850</span>
+                            <span class="block text-4xl font-bold">R$ 699<span class="text-lg">/ano</span></span>
+                            <span class="text-sm text-blue-200">Economize R$ 151</span>
+                        </div>
+                        <div class="text-left">
+                            <ul class="text-left space-y-2 text-sm">
+                                <li class="flex items-center gap-2"><span>✓</span> 4 consultas de rotina</li>
+                                <li class="flex items-center gap-2"><span>✓</span> Vacinação anual completa</li>
+                                <li class="flex items-center gap-2"><span>✓</span> Check-up laboratorial</li>
+                                <li class="flex items-center gap-2"><span>✓</span> 10% de desconto em medicamentos</li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/5511991895580?text=Olá! Gostaria de saber mais sobre o pacote preventivo anual." 
+                           class="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition shadow-lg">
+                            Quero o Pacote
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nossa Estrutura -->
+        <section class="section-padding bg-slate-50">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="bg-slate-200 text-slate-700 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">Estrutura Completa</span>
+                    <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 mt-4 mb-6">Tecnologia e infraestrutura<br>para o melhor atendimento</h2>
+                    <p class="text-lg text-slate-600 max-w-3xl mx-auto">Investimos em equipamentos modernos e espaços adequados para garantir diagnósticos precisos e tratamentos eficazes.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="bg-white p-8 rounded-3xl shadow-sm text-center">
+                        <div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl mb-6 mx-auto">🩻</div>
+                        <h3 class="font-bold text-xl text-slate-900 mb-3">Raio-X Digital</h3>
+                        <p class="text-slate-600">Diagnóstico por imagem de alta qualidade para avaliação óssea e de órgãos internos.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-3xl shadow-sm text-center">
+                        <div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl mb-6 mx-auto">📡</div>
+                        <h3 class="font-bold text-xl text-slate-900 mb-3">Ultrassom</h3>
+                        <p class="text-slate-600">Avaliação de órgãos internos, gestação e diagnósticos não-invasivos em tempo real.</p>
+                    </div>
+                    
+                    <div class="bg-white p-8 rounded-3xl shadow-sm text-center">
+                        <div class="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center text-3xl mb-6 mx-auto">💊</div>
+                        <h3 class="font-bold text-xl text-slate-900 mb-3">Farmácia Veterinária</h3>
+                        <p class="text-slate-600">Medicamentos de qualidade com orientação profissional para tratamento adequado.</p>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-blue-100 rounded-[3rem] transform rotate-3 scale-95"></div>
+                        <img src="consultorio.png" 
+                             alt="Centro cirúrgico da clínica" 
+                             class="relative rounded-[3rem] shadow-xl w-full h-auto object-cover border-4 border-white">
+                    </div>
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold text-slate-900">Centro Cirúrgico Completo</h3>
+                        <p class="text-slate-600">Nossa sala de cirurgia é equipada com:</p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <span class="text-green-500 mt-1">✓</span>
+                                <span>Mesa cirúrgica com aquecimento</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-green-500 mt-1">✓</span>
+                                <span>Monitoramento anestésico multiparamétrico</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-green-500 mt-1">✓</span>
+                                <span>Sistema de esterilização por autoclave</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-green-500 mt-1">✓</span>
+                                <span>Recuperação pós-operatória monitorada</span>
+                            </li>
+                        </ul>
+                        <div class="bg-blue-50 p-6 rounded-2xl">
+                            <h4 class="font-bold text-blue-900 mb-2">⚠️ Atenção às Emergências</h4>
+                            <p class="text-sm text-blue-700">Em caso de emergência, não espere! Ligue imediatamente para nosso plantão 24h. Tempo é crucial em situações de risco.</p>
+                            <a href="tel:+5511991895580" class="inline-block mt-4 bg-red-500 text-white px-6 py-3 rounded-full font-bold hover:bg-red-600 transition">
+                                🚨 Ligar para Emergência
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nossa Equipe -->
+        <section class="section-padding bg-white">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-16">
+                    <span class="bg-blue-100 text-blue-600 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">Nossa Equipe</span>
+                    <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 mt-4 mb-6">Profissionais especializados<br>e apaixonados por animais</h2>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="text-center">
+                        <div class="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-100 to-indigo-100 flex items-center justify-center text-6xl">
+                            👩‍⚕️
+                        </div>
+                        <h3 class="font-bold text-xl text-slate-900 mb-2">Dra. Carla Mendes</h3>
+                        <p class="text-blue-600 font-medium mb-3">CRMV-SP 12.345</p>
+                        <p class="text-slate-600">Especialista em cirurgia veterinária e emergências. Formada pela USP com 15 anos de experiência.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-br from-green-100 to-teal-100 flex items-center justify-center text-6xl">
+                            👨‍⚕️
+                        </div>
+                        <h3 class="font-bold text-xl text-slate-900 mb-2">Dr. Ricardo Almeida</h3>
+                        <p class="text-blue-600 font-medium mb-3">CRMV-SP 12.346</p>
+                        <p class="text-slate-600">Clínico geral e especialista em medicina interna. Mestre em dermatologia veterinária.</p>
+                    </div>
+                    
+                    <div class="text-center">
+                        <div class="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-br from-purple-100 to-pink-100 flex items-center justify-center text-6xl">
+                            👩‍⚕️
+                        </div>
+                        <h3 class="font-bold text-xl text-slate-900 mb-2">Dra. Beatriz Costa</h3>
+                        <p class="text-blue-600 font-medium mb-3">CRMV-SP 12.347</p>
+                        <p class="text-slate-600">Especialista em odontologia veterinária e anestesiologia. Formada pela UNESP com 8 anos de experiência.</p>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-900 mb-4">Plantão 24 horas</h3>
+                            <p class="text-slate-700 mb-6">Nossa equipe de plantonistas está sempre disponível para emergências. Contamos com veterinários especializados em terapia intensiva.</p>
+                            <div class="flex items-center gap-4">
+                                <div class="text-center">
+                                    <span class="block text-3xl font-bold text-blue-600">100%</span>
+                                    <span class="text-sm text-slate-600">Dedicados</span>
+                                </div>
+                                <div class="h-10 w-px bg-blue-200"></div>
+                                <div class="text-center">
+                                    <span class="block text-3xl font-bold text-blue-600">24h</span>
+                                    <span class="text-sm text-slate-600">Disponíveis</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <a href="tel:+5511991895580" 
+                               class="inline-flex items-center gap-3 bg-red-500 text-white px-8 py-4 rounded-full font-bold hover:bg-red-600 transition shadow-lg text-lg">
+                                📞 (11) 99189-5580
+                            </a>
+                            <p class="text-sm text-slate-600 mt-3">Emergência Veterinária 24h</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Clínica -->
+        <section class="section-padding bg-slate-50">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-6">Dúvidas sobre atendimento veterinário</h2>
+                    <p class="text-lg text-slate-600">Respostas para as perguntas mais frequentes sobre nossos serviços veterinários</p>
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <h4 class="font-bold text-lg text-slate-900 mb-2">Como funciona o atendimento de emergência 24h?</h4>
+                        <p class="text-slate-600">Temos veterinários de plantão 24 horas por dia, 7 dias por semana. Basta ligar para (11) 99189-5580 que nossa equipe estará pronta para atender. Em casos graves, já orientamos por telefone as primeiras medidas enquanto você se dirige à clínica.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <h4 class="font-bold text-lg text-slate-900 mb-2">Preciso de agendamento para consulta de rotina?</h4>
+                        <p class="text-slate-600">Para consultas de rotina, recomendamos agendamento prévio pelo WhatsApp ou telefone. Para emergências, não é necessário agendamento - atendemos imediatamente.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <h4 class="font-bold text-lg text-slate-900 mb-2">Vocês fazem castração? A partir de qual idade?</h4>
+                        <p class="text-slate-600">Sim, realizamos castração com segurança. Recomendamos a partir dos 6 meses para fêmeas e 7-8 meses para machos, mas cada caso é avaliado individualmente. Agende uma consulta para avaliação pré-cirúrgica.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <h4 class="font-bold text-lg text-slate-900 mb-2">Aceitam convênios veterinários?</h4>
+                        <p class="text-slate-600">Aceitamos os principais convênios veterinários. Entre em contato para verificar se seu plano é aceito. Também oferecemos opções de pagamento parcelado no cartão e descontos para pagamento à vista.</p>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl p-6 shadow-sm">
+                        <h4 class="font-bold text-lg text-slate-900 mb-2">Oferecem internamento para pets doentes?</h4>
+                        <p class="text-slate-600">Sim, temos enfermaria para internamento com monitoramento 24h. Contamos com oxigenoterapia, fluidoterapia contínua e cuidados intensivos para pets que precisam de observação constante.</p>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-12">
+                    <p class="text-slate-600 mb-6">Ainda tem dúvidas? Fale diretamente com nossa equipe veterinária!</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://wa.me/5511991895580" 
+                           class="inline-flex items-center gap-3 bg-[#25D366] text-white px-8 py-4 rounded-full font-bold hover:bg-green-600 transition shadow-lg">
+                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                            WhatsApp da Clínica
+                        </a>
+                        <a href="tel:+5511991895580" 
+                           class="inline-flex items-center gap-3 bg-blue-600 text-white px-8 py-4 rounded-full font-bold hover:bg-blue-700 transition shadow-lg">
+                            📞 Ligar para Clínica
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final -->
+        <section class="py-20 px-4 bg-gradient-to-r from-blue-600 to-indigo-700 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+            
+            <div class="max-w-4xl mx-auto text-center relative z-10 text-white">
+                <div class="inline-block p-4 bg-white/20 rounded-2xl mb-6">
+                    <span class="text-4xl">🏥</span>
+                </div>
+                <h2 class="text-3xl md:text-5xl font-heading font-bold mb-6">Saúde do seu pet em primeiro lugar!</h2>
+                <p class="text-xl opacity-90 mb-10">Não espere para cuidar da saúde do seu melhor amigo. Agende uma consulta ou venha em caso de emergência.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:+5511991895580" class="bg-white text-blue-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-gray-100 transition transform hover:-translate-y-1 flex items-center justify-center gap-3">
+                        🚨 Emergência 24h
+                    </a>
+                    <a href="https://wa.me/5511991895580" class="bg-transparent border-2 border-white text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition flex items-center justify-center gap-3">
+                        🩺 Agendar Consulta
+                    </a>
+                </div>
+                
+                <div class="mt-12 pt-8 border-t border-white/20">
+                    <h4 class="font-bold text-xl mb-4">Horário de Funcionamento</h4>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                        <div class="bg-white/10 p-4 rounded-xl">
+                            <p class="font-bold">Consultas Agendadas</p>
+                            <p class="text-lg">Segunda a Sábado: 8h30 - 20h</p>
+                            <p class="text-sm opacity-80">Domingo: 9h - 14h</p>
+                        </div>
+                        <div class="bg-red-500/20 p-4 rounded-xl border border-red-400/30">
+                            <p class="font-bold">Emergências</p>
+                            <p class="text-lg">24 horas por dia</p>
+                            <p class="text-sm opacity-80">7 dias por semana</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-900 text-slate-300 py-16 px-4 border-t-4 border-blue-500">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
+            <div>
+                <div class="flex items-center gap-3 mb-6">
+                    <img src="logo.png" alt="Logo Footer" class="h-12 w-auto opacity-80">
+                    <div class="font-bold text-white text-lg">Morada dos Pássaros</div>
+                </div>
+                <p class="text-sm opacity-70">Cuidando com amor e profissionalismo de quem você mais ama. Referência no Jardim Rosana.</p>
+            </div>
+            
+            <div>
+                <h4 class="text-white font-bold mb-4">Acesso Rápido</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="banho-tosa.html" class="hover:text-orange-400 transition">Banho e Tosa</a></li>
+                    <li><a href="clinica.html" class="hover:text-orange-400 transition">Clínica Veterinária</a></li>
+                    <li><a href="delivery.html" class="hover:text-orange-400 transition">Delivery</a></li>
+                    <li><a href="index.html" class="hover:text-orange-400 transition">Página Inicial</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-4">Contato</h4>
+                <ul class="space-y-2 text-sm">
+                    <li>📍 Av. Carlos Lacerda, 1758 - Jd. Rosana, São Paulo - SP, 05789-001</li>
+                    <li>📞 (11) 99189-5580</li>
+                    <li>📧 contato@moradadospassaros.com.br</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-bold mb-4">Redes Sociais</h4>
+                <div class="flex gap-4">
+                    <a href="https://www.instagram.com/moradadospassaros_jardimrosana/" target="_blank" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-blue-500 hover:text-white transition group" aria-label="Instagram">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                   <a href="https://wa.me/5511991895580" target="_blank" 
+       class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-[#25D366] text-white transition-all duration-300 group" 
+       aria-label="WhatsApp">
+        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto text-center mt-12 pt-8 border-t border-slate-800 text-xs opacity-40">
+            &copy; 2024 Pet Shop Morada dos Pássaros. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <div id="lgpd-modal" class="fixed bottom-0 left-0 w-full z-50 p-4 hidden">
+        <div class="max-w-4xl mx-auto bg-white/90 backdrop-blur-md border border-blue-100 rounded-2xl shadow-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 lgpd-slide-up">
+            <div class="text-sm text-slate-600">
+                <h5 class="font-bold text-slate-900 text-lg mb-2">Sua privacidade importa 🍪</h5>
+                <p>Utilizamos cookies para melhorar sua experiência e para fins de marketing. Ao continuar navegando, você concorda com nossos <a href="termos.html" class="text-blue-600 underline font-bold hover:text-blue-700">Termos de Uso</a> e <a href="privacidade.html" class="text-blue-600 underline font-bold hover:text-blue-700">Política de Privacidade</a>.</p>
+            </div>
+            <div class="flex gap-4 w-full md:w-auto">
+                <button id="btn-aceitar-lgpd" class="flex-1 md:flex-none bg-blue-500 text-white px-8 py-3 rounded-xl font-bold hover:bg-blue-600 transition shadow-lg text-center whitespace-nowrap">
+                    Aceitar e Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/5511991895580?text=Olá! Vim pelo site e preciso de atendimento veterinário." 
+       class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl z-40 pulse-animation flex items-center justify-center hover:bg-[#20ba5a] transition-all duration-300"
+       aria-label="Falar no WhatsApp">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+    <script>
+        // Menu Mobile Toggle
+        const btn = document.getElementById('hamburguer');
+        const menu = document.getElementById('mobile-menu');
+        
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Fechar menu ao clicar em links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // LGPD Logic
+        document.addEventListener("DOMContentLoaded", function() {
+            const lgpdModal = document.getElementById('lgpd-modal');
+            const btnAceitar = document.getElementById('btn-aceitar-lgpd');
+            
+            if (!localStorage.getItem('lgpd_accepted')) {
+                setTimeout(() => {
+                    lgpdModal.classList.remove('hidden');
+                }, 1000);
+            }
+
+            btnAceitar.addEventListener('click', () => {
+                localStorage.setItem('lgpd_accepted', 'true');
+                lgpdModal.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

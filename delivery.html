@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pet Shop Morada dos Pássaros | Delivery de Produtos para Pets | Jd. Rosana - SP</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.png" type="image/png">
+
+  <!-- Meta Tags SEO -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Delivery de produtos para pets no Jd. Rosana - SP. Ração, petiscos, brinquedos, acessórios para pássaros, cães, gatos e muito mais. Entregamos na sua casa!">
+  <meta name="keywords" content="delivery pet, pet shop, ração para pássaros, produtos para aves, jd. rosana, morada dos pássaros, delivery pet shop">
+  <link rel="canonical" href="https://www.petshopmoradadospassaros.com.br/delivery">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pet Shop Morada dos Pássaros | Delivery de Produtos para Pets">
+  <meta property="og:description" content="Produtos para todos os pets entregues na sua casa. Ração, petiscos, brinquedos e muito mais!">
+  <meta property="og:image" content="logo-morada.jpg">
+  <meta property="og:url" content="https://www.petshopmoradadospassaros.com.br/delivery">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pet Shop Morada dos Pássaros - Delivery de Produtos para Pets">
+  <meta name="twitter:description" content="Produtos premium entregues na sua casa para todos os seus pets">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Configuração do Tailwind -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandBlue: '#7DA1F8',
+            brandYellow: '#E6C163',
+            brandDark: '#2D3436',
+            brandGreen: '#10B981',
+            brandRed: '#F87171',
+          },
+          fontFamily: {
+            title: ['Fredoka', 'sans-serif'],
+            sans: ['Outfit', 'sans-serif'],
+          },
+          animation: {
+            'float': 'float 3s ease-in-out infinite',
+            'bounce-slow': 'bounce 2s infinite',
+          },
+          keyframes: {
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Estilos Customizados -->
+  <style>
+    body { 
+      font-family: 'Outfit', sans-serif;
+      overflow-x: hidden;
+    }
+    
+    .glass-effect { 
+      background: rgba(255, 255, 255, 0.95); 
+      backdrop-filter: blur(10px); 
+      -webkit-backdrop-filter: blur(10px);
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #f0f4ff 0%, #fef9e7 100%);
+    }
+    
+    .btn-bounce:hover { 
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(125, 161, 248, 0.3);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    *:focus {
+      outline: 2px solid #7DA1F8;
+      outline-offset: 2px;
+    }
+    
+    img {
+      content-visibility: auto;
+    }
+    
+    .transition-all {
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 300ms;
+    }
+
+    @keyframes bounce-slow {
+      0%, 100% { transform: translateY(-5%); }
+      50% { transform: translateY(0); }
+    }
+    
+    .animate-bounce-slow {
+      animation: bounce-slow 3s infinite;
+    }
+
+    /* Padrão de Patas e Penas */
+    .bg-paw-pattern {
+      background-color: #7DA1F8;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 100 100'%3E%3Cpath fill='rgba(230, 193, 99, 0.15)' d='M50 55c-13.8 0-25 11.2-25 25s11.2 25 25 25 25-11.2 25-25-11.2-25-25-25zm-30-20c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15zm60 0c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15zM30 5c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15zm40 0c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15z'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 60px 60px;
+    }
+
+    /* Animação para menu mobile */
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animate-slideIn {
+      animation: slideIn 0.3s ease-out;
+    }
+
+    #desktopMenu a, .mobile-link {
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  </style>
+
+  <!-- JSON-LD para SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PetStore",
+    "name": "Pet Shop Morada dos Pássaros",
+    "description": "Delivery de produtos para pets no Jd. Rosana - SP",
+    "url": "https://www.petshopmoradadospassaros.com.br",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jd. Rosana",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "openingHours": [
+      "Mo 09:00-18:00",
+      "Tu 09:00-18:00",
+      "We 09:00-18:00",
+      "Th 09:00-18:00",
+      "Fr 09:00-18:00",
+      "Sa 09:00-13:00"
+    ],
+    "image": "logo-morada.jpg",
+    "priceRange": "$$",
+    "telephone": "+5511994018898",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "35"
+    }
+  }
+  </script>
+</head>
+
+<body class="font-sans text-brandDark bg-white leading-relaxed">
+  <!-- ============================================
+                    WHATSAPP FLUTUANTE
+  ============================================= -->
+  <a href="https://wa.me/5511994018898?text=Olá! Gostaria de fazer um pedido pelo delivery do Pet Shop Morada dos Pássaros" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     aria-label="Enviar mensagem no WhatsApp para delivery"
+     class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl btn-bounce animate-bounce-slow flex items-center justify-center transition-transform hover:scale-110"
+     style="width: 64px; height: 64px;">
+    <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.72.94 3.659 1.437 5.63 1.438h.004c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+    <span class="sr-only">Fale conosco no WhatsApp para delivery</span>
+  </a>
+
+  <!-- ============================================
+                      HEADER
+  ============================================= -->
+  <header class="fixed w-full z-[100] transition-all duration-300 glass-effect border-b border-gray-100" role="banner">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center gap-3 group">
+                <img src="logo.png" alt="Logo Morada dos Pássaros" class="h-16 w-auto object-contain transition-transform group-hover:scale-105">
+                <div class="leading-tight hidden sm:block">
+                    <div class="font-heading font-bold text-xl text-slate-800">Morada dos Pássaros</div>
+                    <div class="text-xs text-orange-600 font-bold tracking-widest uppercase">Pet Shop & Vet</div>
+                </div>
+            </a>
+
+      <!-- Navegação Desktop -->
+      <nav id="desktopMenu" class="hidden md:flex gap-8 items-center">
+        <a href="index.html" class="uppercase text-gray-600 hover:text-brandBlue font-medium transition-colors">Home</a>
+        <a href="index.html#produtos" class="uppercase text-gray-600 hover:text-brandBlue font-medium transition-colors">Produtos</a>
+        <a href="index.html#servicos" class="uppercase text-gray-600 hover:text-brandBlue font-medium transition-colors">Serviços</a>
+        <a href="index.html#sobre" class="uppercase text-gray-600 hover:text-brandBlue font-medium transition-colors">Sobre</a>
+        <a href="delivery.html" class="uppercase bg-brandRed text-white px-6 py-2.5 rounded-full btn-bounce shadow-md hover:shadow-lg hover:bg-brandRed/90 transition-all font-semibold text-sm flex items-center justify-center"
+           aria-label="Delivery de produtos para pets">
+          🚚 Delivery
+        </a>
+        <a href="https://wa.me/5511994018898?text=Olá! Gostaria de fazer um pedido no Pet Shop Morada dos Pássaros" 
+           target="_blank"
+           rel="noopener noreferrer"
+           class="uppercase bg-brandGreen text-white px-6 py-2.5 rounded-full btn-bounce shadow-md hover:shadow-lg hover:bg-brandGreen/90 transition-all font-semibold text-sm flex items-center justify-center"
+           aria-label="Fazer pedido pelo WhatsApp">
+          Pedir pelo WhatsApp
+        </a>
+      </nav>
+
+      <!-- Botão Menu Mobile -->
+      <button id="menuBtn" 
+              class="md:hidden p-2 text-brandBlue focus:outline-none focus:ring-2 focus:ring-brandBlue rounded-lg"
+              aria-label="Abrir menu de navegação" 
+              aria-expanded="false"
+              aria-controls="menuMobile">
+        <svg id="menuIcon" class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menu Mobile -->
+    <div id="menuMobile" 
+         class="hidden md:hidden bg-white border-t border-gray-100 p-6 space-y-3 shadow-xl"
+         role="menu"
+         aria-label="Menu móvel">
+      <a href="index.html" class="block text-lg font-medium py-3 border-b border-gray-50 hover:text-brandBlue" role="menuitem">🏠 HOME</a> 
+      <a href="index.html#produtos" class="block text-lg font-medium py-3 border-b border-gray-50 hover:text-brandBlue" role="menuitem">🛒 PRODUTOS</a>
+      <a href="index.html#servicos" class="block text-lg font-medium py-3 border-b border-gray-50 hover:text-brandBlue" role="menuitem">⚙️ SERVIÇOS</a>
+      <a href="index.html#sobre" class="block text-lg font-medium py-3 border-b border-gray-50 hover:text-brandBlue" role="menuitem">ℹ️ SOBRE</a>
+      <a href="delivery.html" class="block text-lg font-bold text-white bg-brandRed py-3 rounded-lg text-center btn-bounce" role="menuitem">🚚 Delivery</a>
+      <a href="https://wa.me/5511994018898?text=Olá! Gostaria de fazer um pedido no Pet Shop Morada dos Pássaros" 
+         target="_blank"
+         rel="noopener noreferrer"
+         class="block text-lg font-bold text-white bg-brandGreen py-3 rounded-lg text-center btn-bounce mt-4" role="menuitem">
+        Pedir pelo WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- ============================================
+                      CONTEÚDO PRINCIPAL
+  ============================================= -->
+  <main id="inicio" class="pt-32">
+    <!-- Seção Hero Delivery -->
+    <section class="hero-gradient py-20 md:py-28 px-4 sm:px-6" aria-labelledby="delivery-title">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div class="text-left space-y-6">
+          <span class="inline-block bg-brandRed/20 text-brandRed font-bold px-4 py-2 rounded-full text-sm uppercase tracking-widest">
+            Delivery Express
+          </span>
+          
+          <h1 id="delivery-title" class="font-title text-4xl md:text-6xl text-brandBlue font-bold leading-tight">
+            <span class="text-brandRed block">Produtos para Pets</span>
+            entregues na porta 
+            <span class="text-brandRed">da sua casa</span>
+          </h1>
+          
+          <p class="text-lg text-gray-600 max-w-xl">
+            Tudo o que seu pet precisa com entrega rápida no Jd. Rosana e região. Ração, petiscos, brinquedos, acessórios para pássaros, cães, gatos e muito mais!
+          </p>
+          
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <a href="#produtos" 
+               class="bg-brandRed text-white px-10 py-4 rounded-full text-lg font-bold shadow-xl shadow-red-200 btn-bounce text-center"
+               aria-label="Ver produtos disponíveis">
+              Ver Produtos
+            </a>
+            <a href="https://wa.me/5511994018898?text=Olá! Gostaria de fazer um pedido pelo delivery do Pet Shop Morada dos Pássaros" 
+               target="_blank"
+               rel="noopener noreferrer"
+               class="border-2 border-brandBlue text-brandBlue px-10 py-4 rounded-full text-lg font-bold hover:bg-brandBlue hover:text-white transition-all text-center"
+               aria-label="Fazer pedido pelo WhatsApp">
+              Pedir Agora pelo WhatsApp
+            </a>
+          </div>
+        </div>
+        
+        <div class="relative hidden md:block animate-float">
+          <div class="absolute -bottom-6 -left-6 w-64 h-64 bg-brandRed rounded-full filter blur-3xl opacity-20"></div>
+          <img src="delivery1.png" 
+               alt="Produtos para pets delivery Pet Shop Morada dos Pássaros"
+               class="relative rounded-3xl shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500"
+               loading="lazy"
+               width="600"
+               height="400">
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Produtos -->
+    <section id="produtos" class="py-20 bg-white" aria-labelledby="produtos-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <h2 id="produtos-title" class="font-title text-4xl md:text-5xl font-bold text-brandBlue text-center mb-16">
+          Nossos Produtos em Destaque
+        </h2>
+        
+        <!-- Filtros de Categorias -->
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+          <button class="filter-btn bg-brandBlue text-white px-6 py-3 rounded-full font-medium hover:bg-brandBlue/90 transition-colors" data-filter="all">
+            Todos os Produtos
+          </button>
+          <button class="filter-btn bg-gray-100 text-gray-800 px-6 py-3 rounded-full font-medium hover:bg-brandBlue hover:text-white transition-colors" data-filter="passaros">
+            🐦 Pássaros
+          </button>
+          <button class="filter-btn bg-gray-100 text-gray-800 px-6 py-3 rounded-full font-medium hover:bg-brandBlue hover:text-white transition-colors" data-filter="caes">
+            🐕 Cães
+          </button>
+          <button class="filter-btn bg-gray-100 text-gray-800 px-6 py-3 rounded-full font-medium hover:bg-brandBlue hover:text-white transition-colors" data-filter="gatos">
+            🐈 Gatos
+          </button>
+          <button class="filter-btn bg-gray-100 text-gray-800 px-6 py-3 rounded-full font-medium hover:bg-brandBlue hover:text-white transition-colors" data-filter="outros">
+            🐹 Outros Pets
+          </button>
+        </div>
+        
+        <!-- Grid de Produtos -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Produto 1 - Ração para Pássaros -->
+          <div class="product-card bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="passaros">
+            <div class="relative h-64 bg-gray-100 flex items-center justify-center p-6">
+              <img src="aves.png" alt="Ração para Pássaros Premium" class="max-h-48 object-contain">
+              <span class="absolute top-4 left-4 bg-brandYellow text-white px-3 py-1 rounded-full text-xs font-bold">🐦</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-title text-xl font-bold text-gray-800 mb-2">Ração para Pássaros Premium</h3>
+              <p class="text-gray-600 mb-4 text-sm">Mistura balanceada com sementes selecionadas, frutas e nutrientes essenciais para aves de todas as espécies.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-2xl font-bold text-brandBlue">R$ 24,90</span>
+                <span class="text-sm text-gray-500">1kg</span>
+              </div>
+              <button class="add-to-cart mt-6 w-full bg-brandRed text-white py-3 rounded-xl font-bold hover:bg-red-600 transition-colors flex items-center justify-center gap-2"
+                      data-product="Ração para Pássaros Premium" data-price="24.90">
+                <span>🛒</span> Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+          
+          <!-- Produto 2 - Ração para Cães -->
+          <div class="product-card bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="caes">
+            <div class="relative h-64 bg-gray-100 flex items-center justify-center p-6">
+              <img src="racao.png" alt="Ração Premium para Cães Adultos" class="max-h-48 object-contain">
+              <span class="absolute top-4 left-4 bg-brandBlue text-white px-3 py-1 rounded-full text-xs font-bold">🐕</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-title text-xl font-bold text-gray-800 mb-2">Ração Premium para Cães</h3>
+              <p class="text-gray-600 mb-4 text-sm">Ração completa e balanceada para cães adultos de todas as raças. Rico em proteínas e nutrientes essenciais.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-2xl font-bold text-brandBlue">R$ 189,90</span>
+                <span class="text-sm text-gray-500">15kg</span>
+              </div>
+              <button class="add-to-cart mt-6 w-full bg-brandRed text-white py-3 rounded-xl font-bold hover:bg-red-600 transition-colors flex items-center justify-center gap-2"
+                      data-product="Ração Premium para Cães" data-price="189.90">
+                <span>🛒</span> Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+          
+          <!-- Produto 3 - Ração para Gatos -->
+          <div class="product-card bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="gatos">
+            <div class="relative h-64 bg-gray-100 flex items-center justify-center p-6">
+              <img src="racao2.png" alt="Ração para Gatos Adultos" class="max-h-48 object-contain">
+              <span class="absolute top-4 left-4 bg-brandRed text-white px-3 py-1 rounded-full text-xs font-bold">🐈</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-title text-xl font-bold text-gray-800 mb-2">Ração para Gatos Adultos</h3>
+              <p class="text-gray-600 mb-4 text-sm">Fórmula especial para gatos adultos, com nutrientes para saúde urinária e pelagem brilhante.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-2xl font-bold text-brandBlue">R$ 129,90</span>
+                <span class="text-sm text-gray-500">10kg</span>
+              </div>
+              <button class="add-to-cart mt-6 w-full bg-brandRed text-white py-3 rounded-xl font-bold hover:bg-red-600 transition-colors flex items-center justify-center gap-2"
+                      data-product="Ração para Gatos Adultos" data-price="129.90">
+                <span>🛒</span> Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+          
+          <!-- Produto 4 - Gaiola para Pássaros -->
+          <div class="product-card bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="passaros">
+            <div class="relative h-64 bg-gray-100 flex items-center justify-center p-6">
+              <img src="produto1.png" alt="Gaiola para Pássaros Grande" class="max-h-48 object-contain">
+              <span class="absolute top-4 left-4 bg-brandYellow text-white px-3 py-1 rounded-full text-xs font-bold">🏠</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-title text-xl font-bold text-gray-800 mb-2">Gaiola para Pássaros Grande</h3>
+              <p class="text-gray-600 mb-4 text-sm">Gaiola espaçosa com comedouros, bebedouro e banheira. Ideal para pássaros de médio e grande porte.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-2xl font-bold text-brandBlue">R$ 149,90</span>
+                <span class="text-sm text-gray-500">60x40x50cm</span>
+              </div>
+              <button class="add-to-cart mt-6 w-full bg-brandRed text-white py-3 rounded-xl font-bold hover:bg-red-600 transition-colors flex items-center justify-center gap-2"
+                      data-product="Gaiola para Pássaros Grande" data-price="149.90">
+                <span>🛒</span> Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+          
+          <!-- Produto 5 - Petiscos para Cães -->
+          <div class="product-card bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="caes">
+            <div class="relative h-64 bg-gray-100 flex items-center justify-center p-6">
+              <img src="produto2.png" alt="Petiscos Naturais para Cães" class="max-h-48 object-contain">
+              <span class="absolute top-4 left-4 bg-brandBlue text-white px-3 py-1 rounded-full text-xs font-bold">🍖</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-title text-xl font-bold text-gray-800 mb-2">Petiscos Naturais para Cães</h3>
+              <p class="text-gray-600 mb-4 text-sm">Snacks 100% naturais sem conservantes. Ideal para treinamento e recompensa. Disponível em três sabores.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-2xl font-bold text-brandBlue">R$ 34,90</span>
+                <span class="text-sm text-gray-500">500g</span>
+              </div>
+              <button class="add-to-cart mt-6 w-full bg-brandRed text-white py-3 rounded-xl font-bold hover:bg-red-600 transition-colors flex items-center justify-center gap-2"
+                      data-product="Petiscos Naturais para Cães" data-price="34.90">
+                <span>🛒</span> Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+          
+          <!-- Produto 6 - Areia para Gatos -->
+          <div class="product-card bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="gatos">
+            <div class="relative h-64 bg-gray-100 flex items-center justify-center p-6">
+              <img src="produto3.png" alt="Areia Higiênica para Gatos" class="max-h-48 object-contain">
+              <span class="absolute top-4 left-4 bg-brandRed text-white px-3 py-1 rounded-full text-xs font-bold">🐾</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-title text-xl font-bold text-gray-800 mb-2">Areia Higiênica para Gatos</h3>
+              <p class="text-gray-600 mb-4 text-sm">Areia aglomerante com controle de odor. Absorve líquidos rapidamente e facilita a limpeza.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-2xl font-bold text-brandBlue">R$ 39,90</span>
+                <span class="text-sm text-gray-500">4kg</span>
+              </div>
+              <button class="add-to-cart mt-6 w-full bg-brandRed text-white py-3 rounded-xl font-bold hover:bg-red-600 transition-colors flex items-center justify-center gap-2"
+                      data-product="Areia Higiênica para Gatos" data-price="39.90">
+                <span>🛒</span> Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+          
+          <!-- Produto 7 - Brinquedos para Pássaros -->
+          <div class="product-card bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="passaros">
+            <div class="relative h-64 bg-gray-100 flex items-center justify-center p-6">
+              <img src="produto4.png" alt="Brinquedos para Pássaros" class="max-h-48 object-contain">
+              <span class="absolute top-4 left-4 bg-brandYellow text-white px-3 py-1 rounded-full text-xs font-bold">🎪</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-title text-xl font-bold text-gray-800 mb-2">Kit Brinquedos para Pássaros</h3>
+              <p class="text-gray-600 mb-4 text-sm">Conjunto com 5 brinquedos coloridos para estimular a atividade física e mental das aves.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-2xl font-bold text-brandBlue">R$ 49,90</span>
+                <span class="text-sm text-gray-500">Kit com 5 peças</span>
+              </div>
+              <button class="add-to-cart mt-6 w-full bg-brandRed text-white py-3 rounded-xl font-bold hover:bg-red-600 transition-colors flex items-center justify-center gap-2"
+                      data-product="Kit Brinquedos para Pássaros" data-price="49.90">
+                <span>🛒</span> Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+          
+          <!-- Produto 8 - Ração para Pequenos Pets -->
+          <div class="product-card bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="outros">
+            <div class="relative h-64 bg-gray-100 flex items-center justify-center p-6">
+              <img src="produto5.png" alt="Ração para Hamsters e Coelhos" class="max-h-48 object-contain">
+              <span class="absolute top-4 left-4 bg-brandGreen text-white px-3 py-1 rounded-full text-xs font-bold">🐹</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-title text-xl font-bold text-gray-800 mb-2">Ração para Pequenos Pets</h3>
+              <p class="text-gray-600 mb-4 text-sm">Alimento completo para hamsters, coelhos e porquinhos da índia. Rico em fibras e vitaminas.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-2xl font-bold text-brandBlue">R$ 29,90</span>
+                <span class="text-sm text-gray-500">800g</span>
+              </div>
+              <button class="add-to-cart mt-6 w-full bg-brandRed text-white py-3 rounded-xl font-bold hover:bg-red-600 transition-colors flex items-center justify-center gap-2"
+                      data-product="Ração para Pequenos Pets" data-price="29.90">
+                <span>🛒</span> Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+          
+          <!-- Produto 9 - Coleira para Cães -->
+          <div class="product-card bg-white rounded-3xl shadow-lg overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2" data-category="caes">
+            <div class="relative h-64 bg-gray-100 flex items-center justify-center p-6">
+              <img src="produto6.png" alt="Coleira para Cães" class="max-h-48 object-contain">
+              <span class="absolute top-4 left-4 bg-brandBlue text-white px-3 py-1 rounded-full text-xs font-bold">🔗</span>
+            </div>
+            <div class="p-6">
+              <h3 class="font-title text-xl font-bold text-gray-800 mb-2">Coleira Confort Premium</h3>
+              <p class="text-gray-600 mb-4 text-sm">Coleira ajustável com fecho de segurança. Material resistente e acolchoado para maior conforto do pet.</p>
+              <div class="flex justify-between items-center">
+                <span class="text-2xl font-bold text-brandBlue">R$ 49,90</span>
+                <span class="text-sm text-gray-500">Médio</span>
+              </div>
+              <button class="add-to-cart mt-6 w-full bg-brandRed text-white py-3 rounded-xl font-bold hover:bg-red-600 transition-colors flex items-center justify-center gap-2"
+                      data-product="Coleira Confort Premium" data-price="49.90">
+                <span>🛒</span> Adicionar ao Carrinho
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Carrinho de Compras -->
+        <div class="mt-20 bg-gray-50 rounded-3xl p-8 shadow-lg">
+          <h3 class="font-title text-3xl text-brandBlue text-center mb-8">Seu Carrinho de Compras</h3>
+          <div id="carrinho" class="mb-8">
+            <div class="text-center py-8 text-gray-500" id="carrinho-vazio">
+              <span class="text-4xl mb-4 block">🛒</span>
+              <p>Seu carrinho está vazio</p>
+              <p class="text-sm">Adicione produtos clicando no botão "Adicionar ao Carrinho"</p>
+            </div>
+            <div id="carrinho-itens" class="hidden">
+              <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
+            </div>
+          </div>
+          
+          <div id="carrinho-total" class="hidden text-center">
+            <div class="flex justify-between items-center mb-6 p-4 bg-white rounded-xl">
+              <span class="text-xl font-bold text-gray-800">Total:</span>
+              <span id="total-valor" class="text-3xl font-bold text-brandBlue">R$ 0,00</span>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <a href="#" 
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 id="whatsapp-pedido"
+                 class="bg-brandGreen text-white px-8 py-4 rounded-xl text-lg font-bold shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-3">
+                <span>💬</span> Finalizar Pedido no WhatsApp
+              </a>
+              <button id="limpar-carrinho" class="border-2 border-brandBlue text-brandBlue px-8 py-4 rounded-xl text-lg font-bold hover:bg-brandBlue hover:text-white transition-all">
+                Limpar Carrinho
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Como Funciona -->
+    <section id="como-funciona" class="py-20 bg-gray-50" aria-labelledby="como-funciona-title">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <h2 id="como-funciona-title" class="font-title text-4xl md:text-5xl font-bold text-brandBlue text-center mb-16">
+          Como Funciona Nosso Delivery
+        </h2>
+        
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <!-- Passo 1 -->
+          <div class="text-center space-y-4">
+            <div class="w-24 h-24 bg-brandBlue text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto shadow-lg">1</div>
+            <h3 class="font-title text-2xl font-bold text-gray-800">Escolha os Produtos</h3>
+            <p class="text-gray-600">Navegue pela nossa seleção de produtos e adicione ao carrinho os itens que seu pet precisa.</p>
+          </div>
+          
+          <!-- Passo 2 -->
+          <div class="text-center space-y-4">
+            <div class="w-24 h-24 bg-brandRed text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto shadow-lg">2</div>
+            <h3 class="font-title text-2xl font-bold text-gray-800">Finalize pelo WhatsApp</h3>
+            <p class="text-gray-600">Clique em "Finalizar Pedido" para enviar sua lista de produtos diretamente para nosso WhatsApp.</p>
+          </div>
+          
+          <!-- Passo 3 -->
+          <div class="text-center space-y-4">
+            <div class="w-24 h-24 bg-brandGreen text-white rounded-full flex items-center justify-center text-3xl font-bold mx-auto shadow-lg">3</div>
+            <h3 class="font-title text-2xl font-bold text-gray-800">Receba em Casa</h3>
+            <p class="text-gray-600">Entregamos rapidamente no Jd. Rosana e região. Aceitamos PIX, cartão e dinheiro.</p>
+          </div>
+        </div>
+        
+        <div class="mt-16 bg-white rounded-3xl p-8 shadow-lg max-w-4xl mx-auto">
+          <h3 class="font-title text-3xl text-brandBlue text-center mb-8">Informações Importantes</h3>
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="space-y-4">
+              <h4 class="font-bold text-gray-800 text-lg flex items-center gap-2"><span>🚚</span> Entrega</h4>
+              <ul class="space-y-2 text-gray-600">
+                <li class="flex items-start gap-2"><span class="text-brandRed">✓</span> <span>Entregamos no Jd. Rosana e região</span></li>
+                <li class="flex items-start gap-2"><span class="text-brandRed">✓</span> <span>Prazo: 24-48 horas úteis</span></li>
+                <li class="flex items-start gap-2"><span class="text-brandRed">✓</span> <span>Frete grátis para compras acima de R$ 100,00</span></li>
+                <li class="flex items-start gap-2"><span class="text-brandRed">✓</span> <span>Entrega expressa disponível</span></li>
+              </ul>
+            </div>
+            
+            <div class="space-y-4">
+              <h4 class="font-bold text-gray-800 text-lg flex items-center gap-2"><span>💳</span> Pagamento</h4>
+              <ul class="space-y-2 text-gray-600">
+                <li class="flex items-start gap-2"><span class="text-brandRed">✓</span> <span>PIX (5% de desconto)</span></li>
+                <li class="flex items-start gap-2"><span class="text-brandRed">✓</span> <span>Cartão de crédito (até 3x)</span></li>
+                <li class="flex items-start gap-2"><span class="text-brandRed">✓</span> <span>Dinheiro na entrega</span></li>
+                <li class="flex items-start gap-2"><span class="text-brandRed">✓</span> <span>Cartão de débito</span></li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="mt-8 pt-8 border-t border-gray-100 text-center">
+            <p class="text-gray-600">
+              <strong>Horário de atendimento:</strong> Segunda a Sexta: 9h às 18h | Sábado: 9h às 13h
+            </p>
+            <p class="text-gray-500 text-sm mt-2">Pedidos feitos após às 16h serão processados no próximo dia útil.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Contato Delivery -->
+    <section id="contato-delivery" class="py-20 bg-paw-pattern text-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <h2 class="font-title text-4xl md:text-5xl font-bold mb-6">Dúvidas sobre o Delivery?</h2>
+        <p class="text-xl opacity-90 mb-12 max-w-3xl mx-auto">Nossa equipe está pronta para ajudar você a escolher os melhores produtos para seu pet.</p>
+        
+        <div class="bg-white text-brandDark rounded-3xl shadow-2xl p-8 md:p-12 max-w-2xl mx-auto">
+          <div class="space-y-8">
+            <div>
+              <h3 class="font-title text-2xl font-bold text-brandBlue mb-6">Fale Conosco</h3>
+              <p class="text-gray-600 mb-8">Tem dúvidas sobre produtos, tamanhos ou precisa de uma recomendação? Entre em contato!</p>
+            </div>
+            
+            <div class="space-y-6">
+              <a href="https://wa.me/5511994018898?text=Olá! Tenho dúvidas sobre os produtos do Pet Shop Morada dos Pássaros" 
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="inline-flex items-center justify-center gap-3 bg-brandGreen text-white px-10 py-4 rounded-2xl btn-bounce font-bold shadow-lg hover:shadow-xl text-lg w-full">
+                <span>💬</span> Tire suas Dúvidas no WhatsApp
+              </a>
+              
+              <div class="pt-6 border-t border-gray-100">
+                <p class="text-gray-600 mb-2">Ou se preferir, ligue para nós:</p>
+                <a href="tel:+5511994018898" class="text-2xl font-bold text-brandBlue hover:text-brandRed transition-colors">
+                  (11) 99401-8898
+                </a>
+                <p class="text-gray-500 text-sm mt-2">WhatsApp e Telefone</p>
+              </div>
+              
+              <div class="pt-6 border-t border-gray-100">
+                <p class="text-gray-600 mb-4">Siga-nos nas redes sociais:</p>
+                <div class="flex justify-center gap-6">
+                  <a href="#" class="text-gray-600 hover:text-brandBlue transition-colors" aria-label="Instagram">
+                    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM12 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zM18.406 5.155c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                  </a>
+                  <a href="#" class="text-gray-600 hover:text-brandBlue transition-colors" aria-label="Facebook">
+                    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================
+                      FOOTER
+  ============================================= -->
+  <footer class="bg-gray-900 text-gray-400 py-12" role="contentinfo">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 items-start text-center md:text-left">
+        <div>
+          <img src="logo.png" alt="Logo Pet Shop Morada dos Pássaros" class="h-20 w-20 mx-auto md:mx-0 mb-4 rounded-full border-2 border-brandYellow transition-transform hover:scale-110 duration-300">
+          <p class="font-title text-2xl text-white font-bold tracking-tight">Pet Shop Morada dos Pássaros</p>
+          <p class="text-sm mt-2 max-w-xs mx-auto md:mx-0">Tudo para o bem-estar do seu pet. Produtos de qualidade com entrega rápida no Jd. Rosana.</p>
+        </div>
+        
+        <div>
+          <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Navegação</h4>
+          <nav class="flex flex-col gap-3 text-sm">
+            <li><a href="banho-tosa.html" class="hover:text-orange-400 transition">Banho e Tosa</a></li>
+            <li><a href="clinica.html" class="hover:text-orange-400 transition">Clínica Veterinária</a></li>
+            <li><a href="delivery.html" class="hover:text-orange-400 transition">Delivery</a></li>
+            <a href="#contato-delivery" class="hover:text-brandYellow transition-colors flex items-center gap-2 justify-center md:justify-start"><span>📞</span> Contato</a>
+          </nav>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Informações</h4>
+          <nav class="flex flex-col gap-3 text-sm">
+            <a href="tel:+5511994018898" class="hover:text-white transition-colors flex items-center gap-2 justify-center md:justify-start">📞 (11) 99401-8898</a>
+            <a href="https://wa.me/5511994018898" target="_blank" class="hover:text-white transition-colors flex items-center gap-2 justify-center md:justify-start">💬 WhatsApp</a>
+            <p class="flex items-center gap-2 justify-center md:justify-start">📍 Jd. Rosana - SP</p>
+            <p class="flex items-center gap-2 justify-center md:justify-start">⏰ Seg-Sex: 9h-18h | Sáb: 9h-13h</p>
+          </nav>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8 text-center">
+        <p class="mb-2 text-sm sm:text-base">
+          © 2024 Pet Shop Morada dos Pássaros • 
+          Desenvolvido por 
+          <a href="https://redesigner.com.br" target="_blank" rel="noopener noreferrer" class="text-brandYellow hover:underline font-semibold">REDESIGNER PPM</a>
+        </p>
+        <p class="text-xs opacity-60">Feito com ❤️ para quem ama os animais.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+                      JAVASCRIPT
+  ============================================= -->
+  <script>
+    // Menu Mobile Funcional
+    document.addEventListener('DOMContentLoaded', function() {
+      const menuBtn = document.getElementById('menuBtn');
+      const menuMobile = document.getElementById('menuMobile');
+      const menuIcon = document.getElementById('menuIcon');
+
+      if (menuBtn && menuMobile) {
+        menuBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const isExpanded = this.getAttribute('aria-expanded') === 'true';
+          
+          // Alterna menu
+          this.setAttribute('aria-expanded', !isExpanded);
+          menuMobile.classList.toggle('hidden');
+          menuMobile.classList.toggle('animate-slideIn');
+          
+          // Troca ícone (hambúrguer ↔ X)
+          if (isExpanded) {
+            menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+          } else {
+            menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
+          }
+        });
+
+        // Fecha menu ao clicar nos links
+        const mobileLinks = menuMobile.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            menuMobile.classList.add('hidden');
+            menuMobile.classList.remove('animate-slideIn');
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+          });
+        });
+
+        // Fecha menu ao clicar fora (apenas em mobile)
+        document.addEventListener('click', function(e) {
+          if (window.innerWidth < 768 && 
+              !menuMobile.contains(e.target) && 
+              !menuBtn.contains(e.target) &&
+              !menuMobile.classList.contains('hidden')) {
+            menuMobile.classList.add('hidden');
+            menuMobile.classList.remove('animate-slideIn');
+            menuBtn.setAttribute('aria-expanded', 'false');
+            menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
+          }
+        });
+      }
+
+      // Header ao Scroll
+      window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+          header.classList.add('py-2', 'shadow-lg');
+          header.classList.remove('py-3');
+        } else {
+          header.classList.remove('py-2', 'shadow-lg');
+          header.classList.add('py-3');
+        }
+      });
+
+      // Smooth Scroll para âncoras
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 80,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+
+      // Sistema de Delivery
+      initDeliverySystem();
+    });
+
+    // Sistema de Delivery
+    function initDeliverySystem() {
+      // Filtros de produtos
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const productCards = document.querySelectorAll('.product-card');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove classe ativa de todos os botões
+          filterButtons.forEach(btn => {
+            btn.classList.remove('bg-brandBlue', 'text-white');
+            btn.classList.add('bg-gray-100', 'text-gray-800');
+          });
+          
+          // Adiciona classe ativa ao botão clicado
+          button.classList.remove('bg-gray-100', 'text-gray-800');
+          button.classList.add('bg-brandBlue', 'text-white');
+          
+          const filter = button.getAttribute('data-filter');
+          
+          // Filtra os produtos
+          productCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.style.display = 'block';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+      
+      // Sistema de Carrinho
+      const cart = JSON.parse(localStorage.getItem('moradaPassarosCart')) || [];
+      const addToCartButtons = document.querySelectorAll('.add-to-cart');
+      const cartItemsContainer = document.getElementById('carrinho-itens');
+      const emptyCartMessage = document.getElementById('carrinho-vazio');
+      const cartTotalContainer = document.getElementById('carrinho-total');
+      const totalValueElement = document.getElementById('total-valor');
+      const whatsappOrderButton = document.getElementById('whatsapp-pedido');
+      const clearCartButton = document.getElementById('limpar-carrinho');
+      
+      // Atualizar carrinho na interface
+      function updateCartDisplay() {
+        if (cart.length === 0) {
+          emptyCartMessage.classList.remove('hidden');
+          cartItemsContainer.classList.add('hidden');
+          cartTotalContainer.classList.add('hidden');
+        } else {
+          emptyCartMessage.classList.add('hidden');
+          cartItemsContainer.classList.remove('hidden');
+          
+          // Limpa itens anteriores
+          cartItemsContainer.innerHTML = '';
+          
+          let total = 0;
+          
+          // Adiciona cada item do carrinho
+          cart.forEach((item, index) => {
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
+            
+            const itemElement = document.createElement('div');
+            itemElement.className = 'flex items-center justify-between p-4 border-b border-gray-200';
+            itemElement.innerHTML = `
+              <div class="flex-1">
+                <h4 class="font-bold text-gray-800">${item.name}</h4>
+                <p class="text-sm text-gray-500">R$ ${item.price.toFixed(2).replace('.', ',')} cada</p>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="flex items-center gap-2">
+                  <button class="quantity-btn decrement bg-gray-200 w-8 h-8 rounded-full" data-index="${index}">-</button>
+                  <span class="quantity font-bold w-8 text-center">${item.quantity}</span>
+                  <button class="quantity-btn increment bg-gray-200 w-8 h-8 rounded-full" data-index="${index}">+</button>
+                </div>
+                <span class="font-bold text-brandBlue w-20 text-right">R$ ${itemTotal.toFixed(2).replace('.', ',')}</span>
+                <button class="remove-item text-red-500 hover:text-red-700 ml-4" data-index="${index}">✕</button>
+              </div>
+            `;
+            
+            cartItemsContainer.appendChild(itemElement);
+          });
+          
+          // Atualiza total
+          totalValueElement.textContent = `R$ ${total.toFixed(2).replace('.', ',')}`;
+          cartTotalContainer.classList.remove('hidden');
+          
+          // Atualiza link do WhatsApp
+          const itemsText = cart.map(item => `${item.quantity}x ${item.name} - R$ ${(item.price * item.quantity).toFixed(2)}`).join('%0A');
+          const whatsappMessage = `Olá! Gostaria de fazer um pedido no Pet Shop Morada dos Pássaros:%0A%0A${itemsText}%0A%0ATotal: R$ ${total.toFixed(2).replace('.', ',')}%0A%0ANome: %0AEndereço: %0ATelefone:`;
+          whatsappOrderButton.href = `https://wa.me/5511994018898?text=${whatsappMessage}`;
+        }
+        
+        // Salva carrinho no localStorage
+        localStorage.setItem('moradaPassarosCart', JSON.stringify(cart));
+      }
+      
+      // Adicionar produto ao carrinho
+      addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const productName = button.getAttribute('data-product');
+          const productPrice = parseFloat(button.getAttribute('data-price'));
+          
+          // Verifica se o produto já está no carrinho
+          const existingItemIndex = cart.findIndex(item => item.name === productName);
+          
+          if (existingItemIndex !== -1) {
+            // Incrementa quantidade
+            cart[existingItemIndex].quantity += 1;
+          } else {
+            // Adiciona novo item
+            cart.push({
+              name: productName,
+              price: productPrice,
+              quantity: 1
+            });
+          }
+          
+          updateCartDisplay();
+          
+          // Feedback visual
+          const originalHTML = button.innerHTML;
+          const originalColor = button.classList.toString();
+          
+          button.innerHTML = '✅ Adicionado!';
+          button.classList.remove('bg-brandRed');
+          button.classList.add('bg-green-500');
+          
+          setTimeout(() => {
+            button.innerHTML = originalHTML;
+            button.classList.remove('bg-green-500');
+            button.classList.add('bg-brandRed');
+          }, 1500);
+        });
+      });
+      
+      // Delegar eventos para botões de quantidade e remoção (já que são criados dinamicamente)
+      document.addEventListener('click', (e) => {
+        // Botões de incremento/decremento
+        if (e.target.classList.contains('quantity-btn')) {
+          const index = parseInt(e.target.getAttribute('data-index'));
+          const isIncrement = e.target.classList.contains('increment');
+          
+          if (isIncrement) {
+            cart[index].quantity += 1;
+          } else {
+            if (cart[index].quantity > 1) {
+              cart[index].quantity -= 1;
+            } else {
+              // Remove item se quantidade chegar a 0
+              cart.splice(index, 1);
+            }
+          }
+          
+          updateCartDisplay();
+        }
+        
+        // Botões de remoção
+        if (e.target.classList.contains('remove-item')) {
+          const index = parseInt(e.target.getAttribute('data-index'));
+          cart.splice(index, 1);
+          updateCartDisplay();
+        }
+      });
+      
+      // Limpar carrinho
+      if (clearCartButton) {
+        clearCartButton.addEventListener('click', () => {
+          if (confirm('Tem certeza que deseja limpar o carrinho?')) {
+            cart.length = 0;
+            localStorage.removeItem('moradaPassarosCart');
+            updateCartDisplay();
+          }
+        });
+      }
+      
+      // Inicializar display do carrinho
+      updateCartDisplay();
+    }
+  </script>
+</body>
+</html>
