@@ -12,6 +12,14 @@
     <meta property="og:title" content="Pet Shop Morada dos Pássaros | Cuidado completo para seu pet">
     <meta property="og:description" content="Banho e Tosa, Clínica Veterinária, Táxi Dog e Delivery no Jardim Rosana. Agende pelo WhatsApp!">
     <meta property="og:image" content="https://images.unsplash.com/photo-1596276020587-43af4926e6e9?auto=format&fit=crop&q=80&w=1200">
+    <meta property="og:url" content="https://moradadospassaros.com.br">
+    <meta property="og:site_name" content="Pet Shop Morada dos Pássaros">
+    <meta property="og:locale" content="pt_BR">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pet Shop Morada dos Pássaros | Cuidado completo para seu pet">
+    <meta name="twitter:description" content="Banho e Tosa, Clínica Veterinária, Táxi Dog e Delivery no Jardim Rosana. Agende pelo WhatsApp!">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1596276020587-43af4926e6e9?auto=format&fit=crop&q=80&w=1200">
     
     <link rel="icon" type="image/png" href="fav.png">
 
@@ -129,6 +137,25 @@
             66% { transform: translate(-20px, 20px) scale(0.9); }
             100% { transform: translate(0px, 0px) scale(1); }
         }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .reveal.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
         
         .animation-delay-2000 {
             animation-delay: 2s;
@@ -171,6 +198,7 @@
                 <a href="#clinica" class="text-slate-600 hover:text-orange-500 transition-colors font-heading">Clínica</a>
                 <a href="#produtos" class="text-slate-600 hover:text-orange-500 transition-colors font-heading">Produtos</a>
                 <a href="#depoimentos" class="text-slate-600 hover:text-orange-500 transition-colors font-heading">Depoimentos</a>
+                <a href="#faq" class="text-slate-600 hover:text-orange-500 transition-colors font-heading">FAQ</a>
                 <a href="https://wa.me/5511991895580?text=Olá! Gostaria de agendar um serviço para meu pet." 
                    class="bg-[#25D366] text-white px-6 py-3 rounded-full hover:bg-green-600 transition-all duration-300 shadow-lg hover:shadow-green-500/30 flex items-center gap-2 transform hover:-translate-y-1 normal-case">
                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
@@ -189,6 +217,7 @@
             <a href="#clinica" class="block py-3 font-bold text-sm uppercase tracking-wider text-slate-700 border-b border-gray-50">Clínica Veterinária</a>
             <a href="#produtos" class="block py-3 font-bold text-sm uppercase tracking-wider text-slate-700 border-b border-gray-50">Produtos</a>
             <a href="#depoimentos" class="block py-3 font-bold text-sm uppercase tracking-wider text-slate-700 border-b border-gray-50">Depoimentos</a>
+            <a href="#faq" class="block py-3 font-bold text-sm uppercase tracking-wider text-slate-700 border-b border-gray-50">FAQ</a>
             <a href="https://wa.me/5511991895580?text=Olá! Gostaria de agendar um serviço." 
                class="block w-full text-center bg-[#25D366] text-white py-4 rounded-xl font-bold mt-4 shadow-md flex items-center justify-center gap-2">
                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
@@ -250,7 +279,7 @@
         </div>
     </section>
 
-    <section id="sobre" class="section-padding bg-white relative overflow-hidden">
+    <section id="sobre" class="reveal section-padding bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
             <div class="order-2 lg:order-1 space-y-6">
                 <span class="bg-orange-100 text-orange-600 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">Quem somos</span>
@@ -295,7 +324,7 @@
         </div>
     </section>
 
-    <section id="servicos" class="section-padding bg-white relative">
+    <section id="servicos" class="reveal section-padding bg-white relative">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <span class="bg-orange-100 text-orange-600 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">O que fazemos</span>
@@ -342,7 +371,7 @@
         </div>
     </section>
 
-    <section id="clinica" class="section-padding bg-slate-50 relative overflow-hidden">
+    <section id="clinica" class="reveal section-padding bg-slate-50 relative overflow-hidden">
         <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
             
             <div class="relative">
@@ -397,7 +426,7 @@
         </div>
     </section>
 
-  <section id="produtos" class="section-padding bg-white">
+  <section id="produtos" class="reveal section-padding bg-white">
         <div class="max-w-7xl mx-auto text-center">
             <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-12">O que seu pet precisa? 🦴</h2>
             
@@ -440,7 +469,7 @@
         </div>
     </section>
 
-  <section id="depoimentos" class="section-padding bg-orange-50 relative">
+  <section id="depoimentos" class="reveal section-padding bg-orange-50 relative">
         <div class="max-w-7xl mx-auto px-4">
             
             <div class="text-center mb-16">
@@ -539,6 +568,54 @@
         </div>
     </section>
     
+    <section id="faq" class="reveal section-padding bg-white">
+        <div class="max-w-3xl mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-12 text-center">Perguntas Frequentes</h2>
+
+            <div class="space-y-4">
+                <details class="group bg-gray-50 rounded-2xl p-6 border border-gray-100 cursor-pointer">
+                    <summary class="font-bold text-slate-800 list-none flex justify-between items-center gap-4">
+                        Preciso agendar horário para banho e tosa?
+                        <span class="text-orange-500 shrink-0 transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="mt-4 text-sm text-slate-600 leading-relaxed">Recomendamos agendar pelo WhatsApp para garantir seu horário, mas também atendemos pets sem hora marcada conforme a disponibilidade do dia.</p>
+                </details>
+
+                <details class="group bg-gray-50 rounded-2xl p-6 border border-gray-100 cursor-pointer">
+                    <summary class="font-bold text-slate-800 list-none flex justify-between items-center gap-4">
+                        A clínica veterinária funciona 24h?
+                        <span class="text-orange-500 shrink-0 transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="mt-4 text-sm text-slate-600 leading-relaxed">Sim, nossa clínica oferece atendimento veterinário 24 horas para emergências e consultas.</p>
+                </details>
+
+                <details class="group bg-gray-50 rounded-2xl p-6 border border-gray-100 cursor-pointer">
+                    <summary class="font-bold text-slate-800 list-none flex justify-between items-center gap-4">
+                        Como funciona o Táxi Dog?
+                        <span class="text-orange-500 shrink-0 transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="mt-4 text-sm text-slate-600 leading-relaxed">Buscamos e levamos seu pet em casa para banho, tosa ou consulta. Chame no WhatsApp para verificar disponibilidade na sua região.</p>
+                </details>
+
+                <details class="group bg-gray-50 rounded-2xl p-6 border border-gray-100 cursor-pointer">
+                    <summary class="font-bold text-slate-800 list-none flex justify-between items-center gap-4">
+                        Vocês fazem delivery de ração e produtos?
+                        <span class="text-orange-500 shrink-0 transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="mt-4 text-sm text-slate-600 leading-relaxed">Sim! Faça seu pedido direto pelo WhatsApp e receba em casa no Jardim Rosana e região.</p>
+                </details>
+
+                <details class="group bg-gray-50 rounded-2xl p-6 border border-gray-100 cursor-pointer">
+                    <summary class="font-bold text-slate-800 list-none flex justify-between items-center gap-4">
+                        Quais formas de pagamento vocês aceitam?
+                        <span class="text-orange-500 shrink-0 transition-transform group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="mt-4 text-sm text-slate-600 leading-relaxed">Aceitamos Pix, cartão de crédito, débito e dinheiro.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
     <section class="py-20 px-4 bg-orange-500 relative overflow-hidden">
         <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
         
@@ -600,7 +677,7 @@
             </div>
         </div>
         <div class="max-w-7xl mx-auto text-center mt-12 pt-8 border-t border-slate-800 text-xs opacity-40">
-            &copy; 2024 Pet Shop Morada dos Pássaros. Todos os direitos reservados.
+            &copy; 2026 Pet Shop Morada dos Pássaros. Todos os direitos reservados - Desenvolvido por <a href="https://redesigner.com.br" target="_blank" class="hover:text-orange-400 transition">Redesigner PPM</a>
         </div>
     </footer>
 
@@ -656,6 +733,27 @@
                 localStorage.setItem('lgpd_accepted', 'true');
                 lgpdModal.classList.add('hidden');
             });
+        });
+
+        // Scroll Reveal
+        document.addEventListener("DOMContentLoaded", function() {
+            const revealEls = document.querySelectorAll('.reveal');
+
+            if (!('IntersectionObserver' in window)) {
+                revealEls.forEach(el => el.classList.add('is-visible'));
+                return;
+            }
+
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            revealEls.forEach(el => revealObserver.observe(el));
         });
     </script>
 </body>
