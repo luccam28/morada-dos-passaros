@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Pet Shop Morada dos Pássaros | Banho, Tosa e Clínica Veterinária no Jardim Rosana</title>
+    <title>Pet Shop & Clínica Veterinária no Jardim Rosana | Morada dos Pássaros</title>
     <meta name="description" content="Cuidado completo para seu pet! Banho e Tosa, Clínica Veterinária 24h, Táxi Dog, Delivery de ração e acessórios. Atendimento no Jardim Rosana - SP.">
     <meta name="keywords" content="pet shop, veterinário, banho e tosa, táxi dog, delivery ração, Jardim Rosana, clínica veterinária 24h, castração, vacinação">
     
@@ -15,27 +15,32 @@
     <meta property="og:url" content="https://moradadospassaros.com.br">
     <meta property="og:site_name" content="Pet Shop Morada dos Pássaros">
     <meta property="og:locale" content="pt_BR">
-
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Pet Shop Morada dos Pássaros | Cuidado completo para seu pet">
     <meta name="twitter:description" content="Banho e Tosa, Clínica Veterinária, Táxi Dog e Delivery no Jardim Rosana. Agende pelo WhatsApp!">
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1596276020587-43af4926e6e9?auto=format&fit=crop&q=80&w=1200">
     
     <link rel="icon" type="image/png" href="fav.png">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "PetStore",
         "@id": "https://moradadospassaros.com.br",
         "name": "Pet Shop Morada dos Pássaros",
+        "legalName": "J GONCALVES MORADA DOS PASSAROS LTDA - ME",
         "image": "https://images.unsplash.com/photo-1596276020587-43af4926e6e9?auto=format&fit=crop&q=80&w=1200",
         "description": "Pet Shop e Clínica Veterinária com banho e tosa, táxi dog, delivery e atendimento veterinário 24h no Jardim Rosana, São Paulo.",
         "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Jardim Rosana",
+            "streetAddress": "Av. Carlos Lacerda, 1758 - Jd. Rosana",
             "addressLocality": "São Paulo",
             "addressRegion": "SP",
+            "postalCode": "05789-001",
             "addressCountry": "BR"
         },
         "geo": {
@@ -45,6 +50,7 @@
         },
         "openingHours": "Mo-Sa 08:30-20:00",
         "telephone": "+5511991895580",
+        "email": "contato@moradadospassaros.com.br",
         "priceRange": "$$",
         "serviceType": [
             "Banho e Tosa",
@@ -58,703 +64,352 @@
         }
     }
     </script>
-
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --brand-primary: #F97316;    
-            --brand-secondary: #EF4444;  
-            --brand-accent: #EAB308;     
-            --brand-success: #25D366;
-            --bg-soft: #FFF7ED;          
-            --text-primary: #334155;     
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--text-primary);
-            line-height: 1.6;
-            background-color: var(--bg-soft);
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4, h5, h6, .font-heading {
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 700;
-        }
-
-        .section-padding {
-            padding: 5rem 1rem;
-        }
-        
-        @media (min-width: 768px) {
-            .section-padding {
-                padding: 7rem 1rem;
-            }
-        }
-        
-        .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            border: 1px solid rgba(249, 115, 22, 0.1);
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px -10px rgba(249, 115, 22, 0.15);
-            border-color: var(--brand-primary);
-        }
-        
-        .pulse-animation {
-            animation: pulse 2s infinite;
-        }
-        
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-        
-        .float-animation {
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
-        }
-
-        .animate-blob {
-            animation: blob 7s infinite;
-        }
-        
-        @keyframes blob {
-            0% { transform: translate(0px, 0px) scale(1); }
-            33% { transform: translate(30px, -50px) scale(1.1); }
-            66% { transform: translate(-20px, 20px) scale(0.9); }
-            100% { transform: translate(0px, 0px) scale(1); }
-        }
-
-        .reveal {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-
-        .reveal.is-visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .reveal {
-                opacity: 1;
-                transform: none;
-                transition: none;
-            }
-        }
-        
-        .animation-delay-2000 {
-            animation-delay: 2s;
-        }
-        
-        .glass-effect {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 2px solid rgba(249, 115, 22, 0.1);
-        }
-
-        .lgpd-slide-up {
-            animation: slideUp 0.5s ease-out forwards;
-        }
-        
-        @keyframes slideUp {
-            from { transform: translateY(100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-    </style>
 </head>
 <body class="antialiased">
 
     <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-orange-500 text-white px-4 py-3 rounded-lg z-50 font-bold">Pular para conteúdo principal</a>
 
-    <nav class="fixed w-full glass-effect shadow-sm z-40" aria-label="Navegação principal">
-        <div class="max-w-7xl mx-auto px-4 lg:px-8 h-24 flex justify-between items-center">
-            
-            <a href="#" class="flex items-center gap-3 group">
-                <img src="logo.png" alt="Logo Morada dos Pássaros" class="h-16 w-auto object-contain transition-transform group-hover:scale-105">
-                <div class="leading-tight hidden sm:block">
-                    <div class="font-heading font-bold text-xl text-slate-800">Morada dos Pássaros</div>
-                    <div class="text-xs text-orange-600 font-bold tracking-widest uppercase">Pet Shop & Vet</div>
-                </div>
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <a href="#" class="logo-link" aria-label="Página inicial">
+                <img src="logo.png" alt="Logo Morada dos Pássaros" class="logo-img" width="64" height="64" loading="eager">
             </a>
-            
-            <div class="hidden lg:flex space-x-8 font-bold text-sm tracking-wider uppercase items-center">
-                <a href="#sobre" class="text-slate-600 hover:text-orange-500 transition-colors font-heading">Sobre Nós</a>
-                <a href="#servicos" class="text-slate-600 hover:text-orange-500 transition-colors font-heading">Serviços</a>
-                <a href="#clinica" class="text-slate-600 hover:text-orange-500 transition-colors font-heading">Clínica</a>
-                <a href="#produtos" class="text-slate-600 hover:text-orange-500 transition-colors font-heading">Produtos</a>
-                <a href="#depoimentos" class="text-slate-600 hover:text-orange-500 transition-colors font-heading">Depoimentos</a>
-                <a href="#faq" class="text-slate-600 hover:text-orange-500 transition-colors font-heading">FAQ</a>
+
+            <nav class="nav-desktop" aria-label="Navegação principal">
+                <a href="#sobre">Sobre Nós</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#clinica">Clínica</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#faq">FAQ</a>
                 <a href="https://wa.me/5511991895580?text=Olá! Gostaria de agendar um serviço para meu pet." 
-                   class="bg-[#25D366] text-white px-6 py-3 rounded-full hover:bg-green-600 transition-all duration-300 shadow-lg hover:shadow-green-500/30 flex items-center gap-2 transform hover:-translate-y-1 normal-case">
-                   <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                   class="btn-whatsapp">
+                   <svg class="icon-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                    <span>Agendar</span>
                 </a>
-            </div>
-            
-            <button id="hamburguer" class="lg:hidden p-2 rounded-xl text-orange-500 hover:bg-orange-50 transition-colors" aria-label="Abrir menu">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </nav>
+
+            <button class="menu-toggle" id="hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+                <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
-        
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-orange-100 px-6 py-6 space-y-4 shadow-xl absolute w-full" role="menu">
-            <a href="#sobre" class="block py-3 font-bold text-sm uppercase tracking-wider text-slate-700 border-b border-gray-50">Sobre Nós</a>
-            <a href="#servicos" class="block py-3 font-bold text-sm uppercase tracking-wider text-slate-700 border-b border-gray-50">Serviços</a>
-            <a href="#clinica" class="block py-3 font-bold text-sm uppercase tracking-wider text-slate-700 border-b border-gray-50">Clínica Veterinária</a>
-            <a href="#produtos" class="block py-3 font-bold text-sm uppercase tracking-wider text-slate-700 border-b border-gray-50">Produtos</a>
-            <a href="#depoimentos" class="block py-3 font-bold text-sm uppercase tracking-wider text-slate-700 border-b border-gray-50">Depoimentos</a>
-            <a href="#faq" class="block py-3 font-bold text-sm uppercase tracking-wider text-slate-700 border-b border-gray-50">FAQ</a>
+
+        <div class="mobile-menu" id="mobile-menu" role="menu" hidden>
+            <a href="#sobre" role="menuitem">Sobre Nós</a>
+            <a href="#servicos" role="menuitem">Serviços</a>
+            <a href="#clinica" role="menuitem">Clínica Veterinária</a>
+            <a href="#produtos" role="menuitem">Produtos</a>
+            <a href="#depoimentos" role="menuitem">Depoimentos</a>
+            <a href="#faq" role="menuitem">FAQ</a>
             <a href="https://wa.me/5511991895580?text=Olá! Gostaria de agendar um serviço." 
-               class="block w-full text-center bg-[#25D366] text-white py-4 rounded-xl font-bold mt-4 shadow-md flex items-center justify-center gap-2">
-               <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+               class="btn-whatsapp-mobile" role="menuitem">
+               <svg class="icon-whatsapp" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
                Chamar no WhatsApp
             </a>
         </div>
-    </nav>
+    </header>
 
     <main id="main-content">
-        
-    <section class="pt-36 pb-20 px-4 relative overflow-hidden bg-orange-50/50">
-        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-yellow-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
-        <div class="absolute top-0 left-0 -ml-20 -mt-20 w-96 h-96 bg-orange-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob animation-delay-2000"></div>
-        
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center relative z-10">
-            <div class="text-center lg:text-left space-y-8">
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-slate-900 leading-tight">
-                    Seu pet feliz, <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">você tranquilo.</span>
-                </h1>
-                <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-medium">
-                    No coração do <strong>Jardim Rosana</strong>. Banho, Tosa, Veterinário e aquele carinho que só a <span class="text-orange-600 font-bold">Morada dos Pássaros</span> tem.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="https://wa.me/5511991895580" 
-                       class="bg-gradient-to-r from-orange-500 to-orange-600 text-white text-lg px-8 py-4 rounded-full font-bold shadow-xl hover:shadow-orange-500/40 transition-all duration-300 text-center transform hover:-translate-y-1">
-                        🛁 Agendar Banho
+        <!-- Hero -->
+        <section class="hero section-padding reveal">
+            <div class="hero-bg-blob"></div>
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Seu pet feliz, <br>
+                        <span class="highlight">você tranquilo.</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        No coração do <strong>Jardim Rosana</strong>. Banho, Tosa, Veterinário e aquele carinho que só a <span class="highlight-brand">Morada dos Pássaros</span> tem.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="https://wa.me/5511991895580" class="btn-primary">🛁 Agendar Banho</a>
+                        <a href="tel:+5511991895580" class="btn-secondary">🚑 Emergência</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div><span class="stat-number">100%</span><span class="stat-label">Amor</span></div>
+                        <div class="stat-divider"></div>
+                        <div><span class="stat-number">24h</span><span class="stat-label">Suporte</span></div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=800" 
+                             alt="Cachorro feliz" 
+                             class="hero-img" width="800" height="533" loading="eager" decoding="async">
+                    </div>
+                    <div class="hero-badge">⭐ Top Avaliado</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre -->
+        <section id="sobre" class="section-sobre section-padding reveal">
+            <div class="container">
+                <div class="sobre-grid">
+                    <div class="sobre-text">
+                        <span class="section-tag">Quem somos</span>
+                        <h2 class="section-title">
+                            Mais que um Pet Shop, <br>
+                            <span class="highlight-brand">uma extensão da sua casa.</span>
+                        </h2>
+                        <p class="sobre-desc">
+                            Localizada no coração do <strong>Jardim Rosana</strong>, a Morada dos Pássaros nasceu de um sentimento simples: tratar cada animalzinho não como um cliente, mas como um membro da família.
+                        </p>
+                        <p class="sobre-desc">
+                            Sabemos que confiar o seu "filho de quatro patas" a alguém exige confiança. Por isso, nossa equipe é formada por apaixonados por animais, treinados para oferecer técnica veterinária de ponta com o colo e o carinho que eles recebem em casa.
+                        </p>
+                        <ul class="sobre-diferenciais">
+                            <li>✓ Equipe apaixonada e certificada</li>
+                            <li>✓ Ambiente monitorado e seguro</li>
+                            <li>✓ Transparência total no atendimento</li>
+                        </ul>
+                    </div>
+                    <div class="sobre-image">
+                        <div class="sobre-image-bg"></div>
+                        <img src="loja.png" alt="Equipe Morada dos Pássaros cuidando de um cachorro" class="sobre-img" width="600" height="400" loading="lazy" decoding="async">
+                        <div class="sobre-badge">Referência <span>Jardim Rosana</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Serviços -->
+        <section id="servicos" class="section-servicos section-padding reveal">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="section-tag">O que fazemos</span>
+                    <h2 class="section-title">Tudo em um só lugar</h2>
+                </div>
+                <div class="servicos-grid">
+                    <div class="servico-card">
+                        <div class="servico-icon">🛁</div>
+                        <h3>Banho e Tosa</h3>
+                        <p>Deixe seu pet cheiroso e estiloso com nossos profissionais.</p>
+                        <a href="https://wa.me/5511991895580" class="servico-link">Agendar →</a>
+                    </div>
+                    <div class="servico-card">
+                        <div class="servico-icon">🩺</div>
+                        <h3>Clínica Vet</h3>
+                        <p>Consultas, vacinas e exames. Saúde em dia sempre.</p>
+                        <a href="https://wa.me/5511991895580" class="servico-link">Consultar →</a>
+                    </div>
+                    <div class="servico-card">
+                        <div class="servico-icon">🚕</div>
+                        <h3>Táxi Dog</h3>
+                        <p>Buscamos e levamos com total segurança e conforto.</p>
+                        <a href="https://wa.me/5511991895580" class="servico-link">Pedir Táxi →</a>
+                    </div>
+                    <div class="servico-card">
+                        <div class="servico-icon">🛵</div>
+                        <h3>Delivery</h3>
+                        <p>Ração e farmácia entregues rapidinho na sua porta.</p>
+                        <a href="https://wa.me/5511991895580" class="servico-link">Pedir agora →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clínica -->
+        <section id="clinica" class="section-clinica section-padding reveal">
+            <div class="container">
+                <div class="clinica-grid">
+                    <div class="clinica-image">
+                        <div class="clinica-image-bg"></div>
+                        <img src="equipe.png" alt="Veterinária atenciosa" class="clinica-img" width="600" height="400" loading="lazy" decoding="async">
+                        <div class="clinica-badge">24h <span>Emergência</span></div>
+                    </div>
+                    <div class="clinica-text">
+                        <h2 class="section-title">Saúde levada a sério, <br>com muito carinho.</h2>
+                        <p class="clinica-desc">Nossa equipe veterinária está preparada para tudo. Da vacinação de rotina às emergências da madrugada.</p>
+                        <div class="clinica-especialidades">
+                            <span>🦠 Vacinas</span>
+                            <span>🦷 Odontologia</span>
+                            <span>🩸 Exames</span>
+                            <span>✂️ Cirurgias</span>
+                        </div>
+                        <div class="clinica-horario">
+                            <h4>⏰ Horário de Funcionamento</h4>
+                            <p><span>Segunda a Sábado:</span> <strong>08:30 - 20:00</strong></p>
+                            <p class="emergencia"><span>Emergência Vet:</span> <strong>24 Horas</strong></p>
+                        </div>
+                        <a href="https://wa.me/5511991895580" class="btn-dark">Falar com Veterinário</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Produtos / Marcas -->
+        <section id="produtos" class="section-produtos section-padding reveal">
+            <div class="container text-center">
+                <h2 class="section-title">O que seu pet precisa? 🦴</h2>
+                <p class="marcas-label">Marcas que trabalhamos</p>
+                <div class="marcas-grid">
+                    <div class="marca-item"><img src="adimax.png" alt="Adimax" width="120" height="56" loading="lazy" decoding="async"></div>
+                    <div class="marca-item"><img src="avert.png" alt="Avert Biolab Saúde Animal" width="120" height="56" loading="lazy" decoding="async"></div>
+                    <div class="marca-item"><img src="canin.png" alt="Royal Canin" width="120" height="56" loading="lazy" decoding="async"></div>
+                    <div class="marca-item"><img src="frontline.png" alt="Frontline" width="120" height="56" loading="lazy" decoding="async"></div>
+                    <div class="marca-item"><img src="grand-plus.png" alt="Gran Plus" width="120" height="56" loading="lazy" decoding="async"></div>
+                    <div class="marca-item"><img src="nexgard.png" alt="NexGard" width="120" height="56" loading="lazy" decoding="async"></div>
+                    <div class="marca-item"><img src="simparic.png" alt="Simparic" width="120" height="56" loading="lazy" decoding="async"></div>
+                </div>
+                <div class="produtos-cta">
+                    <a href="https://wa.me/5511991895580" target="_blank" class="produtos-link">Fale Conosco pelo WhatsApp <span>→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Depoimentos -->
+        <section id="depoimentos" class="section-depoimentos section-padding reveal">
+            <div class="container">
+                <div class="section-heading">
+                    <div class="google-badge">
+                        <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.66l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.34-4.53z" fill="#EA4335"/></svg>
+                        <span>Avaliações no Google</span>
+                    </div>
+                    <h2 class="section-title">Quem ama, confia ⭐</h2>
+                    <div class="avaliacao-resumo">
+                        <span class="nota">4.8</span>
+                        <span class="estrelas">★★★★★</span>
+                        <span class="total">(+150 avaliações)</span>
+                    </div>
+                </div>
+                <div class="depoimentos-grid">
+                    <blockquote class="depoimento">
+                        <div class="estrelas">★★★★★</div>
+                        <p>"O melhor atendimento da região do Jardim Rosana. Minha cachorrinha é super bem tratada no banho e tosa, e os veterinários são extremamente competentes e atenciosos. Recomendo muito!"</p>
+                        <footer><cite>Juliana Santos</cite> <span>Local Guide</span></footer>
+                    </blockquote>
+                    <blockquote class="depoimento destaque">
+                        <div class="estrelas">★★★★★</div>
+                        <p>"Lugar maravilhoso, cuidam do meu pet com muito amor. Já precisei da clínica em uma emergência e fui prontamente atendido. O táxi dog deles também é nota 10, muito pontuais."</p>
+                        <footer><cite>Ricardo Almeida</cite> <span>Local Guide</span></footer>
+                    </blockquote>
+                    <blockquote class="depoimento">
+                        <div class="estrelas">★★★★★</div>
+                        <p>"Sempre compro ração e medicamentos aqui pelo WhatsApp. A entrega é muito rápida e o preço é justo. O carinho que eles têm com os animais no atendimento faz toda a diferença."</p>
+                        <footer><cite>Beatriz Costa</cite> <span>Cliente Fiel</span></footer>
+                    </blockquote>
+                </div>
+                <div class="depoimentos-cta">
+                    <a href="https://www.google.com/maps/search/Morada+dos+Passaros+Jardim+Rosana" target="_blank" class="btn-google">
+                        <svg viewBox="0 0 24 24"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.66l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.34-4.53z" fill="#EA4335"/></svg>
+                        Ler todas as avaliações no Google
                     </a>
-                    <a href="tel:+5511991895580" 
-                       class="bg-white border-2 border-red-400 text-red-500 text-lg px-8 py-4 rounded-full font-bold hover:bg-red-50 transition-all duration-300 text-center flex items-center justify-center gap-2">
-                        🚑 Emergência
-                    </a>
-                </div>
-
-                <div class="flex items-center justify-center lg:justify-start gap-8 pt-4 opacity-80">
-                    <div class="text-center lg:text-left">
-                        <span class="block text-2xl font-bold text-slate-800">100%</span>
-                        <span class="text-xs uppercase tracking-wide">Amor</span>
-                    </div>
-                    <div class="w-px h-10 bg-slate-300"></div>
-                    <div class="text-center lg:text-left">
-                        <span class="block text-2xl font-bold text-slate-800">24h</span>
-                        <span class="text-xs uppercase tracking-wide">Suporte</span>
-                    </div>
                 </div>
             </div>
-            
-            <div class="relative float-animation">
-                <div class="relative z-10 p-2 bg-white rounded-[3rem] shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=800" 
-                         alt="Cachorro feliz" 
-                         class="rounded-[2.5rem] w-full h-auto object-cover" loading="eager">
-                </div>
-                <div class="absolute -bottom-6 -left-6 bg-yellow-400 text-white p-4 rounded-2xl shadow-lg rotate-[-6deg] z-20">
-                    <span class="text-2xl font-bold">⭐ Top Avaliado</span>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section-faq section-padding reveal">
+            <div class="container">
+                <h2 class="section-title text-center">Perguntas Frequentes</h2>
+                <div class="faq-list">
+                    <details>
+                        <summary>Preciso agendar horário para banho e tosa? <span class="faq-icon">▼</span></summary>
+                        <p>Recomendamos agendar pelo WhatsApp para garantir seu horário, mas também atendemos pets sem hora marcada conforme a disponibilidade do dia.</p>
+                    </details>
+                    <details>
+                        <summary>A clínica veterinária funciona 24h? <span class="faq-icon">▼</span></summary>
+                        <p>Sim, nossa clínica oferece atendimento veterinário 24 horas para emergências e consultas.</p>
+                    </details>
+                    <details>
+                        <summary>Como funciona o Táxi Dog? <span class="faq-icon">▼</span></summary>
+                        <p>Buscamos e levamos seu pet em casa para banho, tosa ou consulta. Chame no WhatsApp para verificar disponibilidade na sua região.</p>
+                    </details>
+                    <details>
+                        <summary>Vocês fazem delivery de ração e produtos? <span class="faq-icon">▼</span></summary>
+                        <p>Sim! Faça seu pedido direto pelo WhatsApp e receba em casa no Jardim Rosana e região.</p>
+                    </details>
+                    <details>
+                        <summary>Quais formas de pagamento vocês aceitam? <span class="faq-icon">▼</span></summary>
+                        <p>Aceitamos Pix, cartão de crédito, débito e dinheiro.</p>
+                    </details>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="sobre" class="reveal section-padding bg-white relative overflow-hidden">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            <div class="order-2 lg:order-1 space-y-6">
-                <span class="bg-orange-100 text-orange-600 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">Quem somos</span>
-                <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 leading-tight">
-                    Mais que um Pet Shop, <br>
-                    <span class="text-orange-500">uma extensão da sua casa.</span>
-                </h2>
-                <p class="text-lg text-slate-600 leading-relaxed">
-                    Localizada no coração do <strong>Jardim Rosana</strong>, a Morada dos Pássaros nasceu de um sentimento simples: tratar cada animalzinho não como um cliente, mas como um membro da família.
-                </p>
-                <p class="text-lg text-slate-600 leading-relaxed">
-                    Sabemos que confiar o seu "filho de quatro patas" a alguém exige confiança. Por isso, nossa equipe é formada por apaixonados por animais, treinados para oferecer técnica veterinária de ponta com o colo e o carinho que eles recebem em casa.
-                </p>
-                
-                <ul class="space-y-4 pt-4">
-                    <li class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold">✓</div>
-                        <span class="font-bold text-slate-700">Equipe apaixonada e certificada</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold">✓</div>
-                        <span class="font-bold text-slate-700">Ambiente monitorado e seguro</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold">✓</div>
-                        <span class="font-bold text-slate-700">Transparência total no atendimento</span>
-                    </li>
-                </ul>
+        <!-- CTA Final -->
+        <section class="section-cta-final reveal">
+            <div class="container text-center">
+                <h2>Seu pet merece o melhor!</h2>
+                <p>Não deixe para depois. Agende um banho ou peça aquela ração agora mesmo.</p>
+                <a href="https://wa.me/5511991895580" class="btn-white">Chamar no WhatsApp</a>
             </div>
+        </section>
+    </main>
 
-            <div class="order-1 lg:order-2 relative">
-                <div class="absolute inset-0 bg-orange-200 rounded-[3rem] transform -rotate-3 scale-95 opacity-50"></div>
-                <img src="loja.png" 
-                     alt="Equipe Morada dos Pássaros cuidando de um cachorro" 
-                     class="relative rounded-[3rem] shadow-2xl w-full h-auto object-cover border-4 border-white transform hover:scale-[1.02] transition duration-500">
-                
-                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl hidden md:block animate-bounce" style="animation-duration: 3s;">
-                    <p class="text-3xl font-bold text-orange-500 text-center">Referência</p>
-                    <p class="text-xs text-slate-500 font-bold uppercase tracking-wider text-center">Jardim Rosana</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="servicos" class="reveal section-padding bg-white relative">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <span class="bg-orange-100 text-orange-600 px-4 py-1 rounded-full text-sm font-bold uppercase tracking-wide">O que fazemos</span>
-                <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 mt-4 mb-6">Tudo em um só lugar</h2>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-orange-50 p-8 rounded-[2rem] hover:bg-white card-hover group">
-                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 text-4xl shadow-sm group-hover:scale-110 transition-transform">
-                        🛁
-                    </div>
-                    <h3 class="font-bold text-xl text-slate-900 mb-3">Banho e Tosa</h3>
-                    <p class="text-slate-600 text-sm mb-6">Deixe seu pet cheiroso e estiloso com nossos profissionais.</p>
-                    <a href="https://wa.me/5511991895580" class="text-orange-600 font-bold text-sm hover:underline">Agendar →</a>
-                </div>
-                
-                <div class="bg-blue-50 p-8 rounded-[2rem] hover:bg-white card-hover group">
-                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 text-4xl shadow-sm group-hover:scale-110 transition-transform">
-                        🩺
-                    </div>
-                    <h3 class="font-bold text-xl text-slate-900 mb-3">Clínica Vet</h3>
-                    <p class="text-slate-600 text-sm mb-6">Consultas, vacinas e exames. Saúde em dia sempre.</p>
-                    <a href="https://wa.me/5511991895580" class="text-blue-600 font-bold text-sm hover:underline">Consultar →</a>
-                </div>
-                
-                <div class="bg-yellow-50 p-8 rounded-[2rem] hover:bg-white card-hover group">
-                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 text-4xl shadow-sm group-hover:scale-110 transition-transform">
-                        🚕
-                    </div>
-                    <h3 class="font-bold text-xl text-slate-900 mb-3">Táxi Dog</h3>
-                    <p class="text-slate-600 text-sm mb-6">Buscamos e levamos com total segurança e conforto.</p>
-                    <a href="https://wa.me/5511991895580" class="text-yellow-600 font-bold text-sm hover:underline">Pedir Táxi →</a>
-                </div>
-                
-                <div class="bg-purple-50 p-8 rounded-[2rem] hover:bg-white card-hover group">
-                    <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mb-6 text-4xl shadow-sm group-hover:scale-110 transition-transform">
-                        🛵
-                    </div>
-                    <h3 class="font-bold text-xl text-slate-900 mb-3">Delivery</h3>
-                    <p class="text-slate-600 text-sm mb-6">Ração e farmácia entregues rapidinho na sua porta.</p>
-                    <a href="https://wa.me/5511991895580" class="text-purple-600 font-bold text-sm hover:underline">Pedir agora →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="clinica" class="reveal section-padding bg-slate-50 relative overflow-hidden">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
-            
-            <div class="relative">
-                <div class="absolute inset-0 bg-red-100 rounded-[3rem] transform rotate-3 scale-95"></div>
-                <img src="equipe.png" 
-                     alt="Veterinária atenciosa" 
-                     class="relative rounded-[3rem] shadow-xl w-full h-auto object-cover border-4 border-white">
-                
-                <div class="absolute top-10 -right-6 bg-white p-4 rounded-xl shadow-lg animate-bounce">
-                    <span class="text-red-500 font-bold text-xl">24h</span>
-                    <p class="text-xs text-slate-500">Emergência</p>
-                </div>
-            </div>
-
-            <div class="space-y-8">
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900">Saúde levada a sério, <br>com muito carinho.</h2>
-                    <p class="text-lg text-slate-600 mt-4">Nossa equipe veterinária está preparada para tudo. Da vacinação de rotina às emergências da madrugada.</p>
-                </div>
-
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm">
-                        <span class="text-green-500 bg-green-50 p-2 rounded-lg">🦠</span>
-                        <span class="font-bold text-sm text-slate-700">Vacinas</span>
-                    </div>
-                    <div class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm">
-                        <span class="text-blue-500 bg-blue-50 p-2 rounded-lg">🦷</span>
-                        <span class="font-bold text-sm text-slate-700">Odontologia</span>
-                    </div>
-                    <div class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm">
-                        <span class="text-red-500 bg-red-50 p-2 rounded-lg">🩸</span>
-                        <span class="font-bold text-sm text-slate-700">Exames</span>
-                    </div>
-                    <div class="flex items-center gap-3 bg-white p-3 rounded-xl shadow-sm">
-                        <span class="text-purple-500 bg-purple-50 p-2 rounded-lg">✂️</span>
-                        <span class="font-bold text-sm text-slate-700">Cirurgias</span>
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Coluna 1: Marca -->
+                <div class="footer-brand">
+                    <img src="logo.png" alt="Logo Morada dos Pássaros" class="footer-logo" width="140" height="48" loading="lazy" decoding="async">
+                    <span class="footer-name">Morada dos Pássaros</span>
+                    <p>Cuidando com amor e profissionalismo de quem você mais ama. Referência no Jardim Rosana.</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/moradadospassaros_jardimrosana/" target="_blank" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://wa.me/5511991895580" target="_blank" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                        </a>
                     </div>
                 </div>
 
-                <div class="bg-white p-6 rounded-2xl border-l-4 border-orange-500 shadow-sm">
-                    <h4 class="font-bold text-slate-900 mb-2">⏰ Horário de Funcionamento</h4>
-                    <ul class="text-sm text-slate-600 space-y-1">
-                        <li class="flex justify-between"><span>Segunda a Sábado:</span> <strong>08:30 - 20:00</strong></li>
-                        <li class="flex justify-between text-red-500 font-bold"><span>Emergência Vet:</span> <strong>24 Horas</strong></li>
+                <!-- Coluna 2: Contato -->
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li>📍 Av. Carlos Lacerda, 1758 - Jd. Rosana, São Paulo - SP, 05789-001</li>
+                        <li>📞 <a href="tel:+5511991895580">(11) 99189-5580</a></li>
+                        <li>📧 <a href="mailto:contato@moradadospassaros.com.br">contato@moradadospassaros.com.br</a></li>
                     </ul>
                 </div>
 
-                <a href="https://wa.me/5511991895580" class="inline-block bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition shadow-lg">
-                    Falar com Veterinário
-                </a>
-            </div>
-        </div>
-    </section>
-
-  <section id="produtos" class="reveal section-padding bg-white">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-12">O que seu pet precisa? 🦴</h2>
-            
-            <div class="mt-16">
-                <p class="text-slate-400 font-bold text-xs uppercase tracking-widest mb-6">Marcas que trabalhamos</p>
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4 max-w-5xl mx-auto">
-                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex items-center justify-center h-28">
-                        <img src="adimax.png" alt="Adimax" class="max-h-14 max-w-full object-contain">
-                    </div>
-                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex items-center justify-center h-28">
-                        <img src="avert.png" alt="Avert Biolab Saúde Animal" class="max-h-14 max-w-full object-contain">
-                    </div>
-                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex items-center justify-center h-28">
-                        <img src="canin.png" alt="Royal Canin" class="max-h-14 max-w-full object-contain">
-                    </div>
-                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex items-center justify-center h-28">
-                        <img src="frontline.png" alt="Frontline" class="max-h-14 max-w-full object-contain">
-                    </div>
-                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex items-center justify-center h-28">
-                        <img src="grand-plus.png" alt="Gran Plus" class="max-h-14 max-w-full object-contain">
-                    </div>
-                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex items-center justify-center h-28">
-                        <img src="nexgard.png" alt="NexGard" class="max-h-14 max-w-full object-contain">
-                    </div>
-                    <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 flex items-center justify-center h-28">
-                        <img src="simparic.png" alt="Simparic" class="max-h-14 max-w-full object-contain">
-                    </div>
-                </div>
-
-            <div class="mt-12 flex flex-wrap justify-center gap-6 md:gap-12">
-                <a href="https://wa.me/5511991895580" 
-                   class="inline-flex items-center gap-2 text-orange-600 font-bold border-b-2 border-orange-200 hover:border-orange-600 pb-1 transition"
-                   target="_blank">
-                    Fale Conosco pelo WhatsApp <span>→</span>
-                </a>
-            </div>
-
-            
-            </div>
-        </div>
-    </section>
-
-  <section id="depoimentos" class="reveal section-padding bg-orange-50 relative">
-        <div class="max-w-7xl mx-auto px-4">
-            
-            <div class="text-center mb-16">
-                <div class="flex justify-center items-center gap-3 mb-4">
-                    <div class="bg-white p-1.5 rounded-lg shadow-sm flex items-center justify-center">
-                        <svg width="20" height="20" viewBox="0 0 24 24">
-                            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
-                            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.66l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.34-4.53z" fill="#EA4335"/>
-                        </svg>
-                    </div>
-                    <span class="text-slate-600 font-bold text-sm uppercase tracking-widest">Avaliações no Google</span>
-                </div>
-                <h2 class="text-3xl md:text-5xl font-heading font-bold text-slate-900 mt-2">Quem ama, confia ⭐</h2>
-                <div class="flex justify-center items-center gap-1 mt-4 text-yellow-400">
-                    <span class="text-slate-800 font-bold mr-2 text-xl">4.8</span>
-                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                    <span class="text-slate-500 text-sm ml-2">(+150 avaliações)</span>
+                <!-- Coluna 3: Documentos -->
+                <div class="footer-links">
+                    <h4>Documentos</h4>
+                    <ul>
+                        <li><a href="privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos.html">Termos de Uso</a></li>
+                        <li><a href="cookies.html">Política de Cookies</a></li>
+                        <li><a href="lgpd.html">LGPD – Dados Pessoais</a></li>
+                    </ul>
                 </div>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                
-                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-orange-100 relative overflow-hidden">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="text-yellow-400 flex">
-                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                        </div>
-                        <span class="text-slate-300 text-xs">há 2 meses</span>
-                    </div>
-                    <p class="text-slate-600 italic mb-8 leading-relaxed">
-                        "O melhor atendimento da região do Jardim Rosana. Minha cachorrinha é super bem tratada no banho e tosa, e os veterinários são extremamente competentes e atenciosos. Recomendo muito!"
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center font-bold text-orange-600">JS</div>
-                        <div>
-                            <p class="font-bold text-slate-900">Juliana Santos</p>
-                            <p class="text-xs text-green-600 font-bold">Local Guide</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-orange-200 transform md:-translate-y-4 relative overflow-hidden">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="text-yellow-400 flex">
-                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                        </div>
-                        <span class="text-slate-300 text-xs">há 1 ano</span>
-                    </div>
-                    <p class="text-slate-600 italic mb-8 leading-relaxed">
-                        "Lugar maravilhoso, cuidam do meu pet com muito amor. Já precisei da clínica em uma emergência e fui prontamente atendido. O táxi dog deles também é nota 10, muito pontuais."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center font-bold text-blue-600">RA</div>
-                        <div>
-                            <p class="font-bold text-slate-900">Ricardo Almeida</p>
-                            <p class="text-xs text-green-600 font-bold">Local Guide</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all duration-300 border border-orange-100 relative overflow-hidden">
-                    <div class="flex justify-between items-start mb-4">
-                        <div class="text-yellow-400 flex">
-                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                        </div>
-                        <span class="text-slate-300 text-xs">há 5 meses</span>
-                    </div>
-                    <p class="text-slate-600 italic mb-8 leading-relaxed">
-                        "Sempre compro ração e medicamentos aqui pelo WhatsApp. A entrega é muito rápida e o preço é justo. O carinho que eles têm com os animais no atendimento faz toda a diferença."
-                    </p>
-                    <div class="flex items-center gap-4">
-                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center font-bold text-purple-600">BC</div>
-                        <div>
-                            <p class="font-bold text-slate-900">Beatriz Costa</p>
-                            <p class="text-xs text-slate-500">Cliente Fiel</p>
-                        </div>
-                    </div>
-                </div>
+            <!-- Linha inferior: copyright + informações legais -->
+            <div class="footer-copy">
+                <p>&copy; 2026 Pet Shop Morada dos Pássaros. Todos os direitos reservados.</p>
+                <p>
+                    <strong>Razão Social:</strong> J GONCALVES MORADA DOS PASSAROS LTDA - ME &nbsp;|&nbsp;
+                    <strong>CNPJ:</strong> 74.532.649/0003-51 &nbsp;|&nbsp;
+                    <strong>Nome Fantasia:</strong> PET SHOP MORADA DOS PASSAROS
+                </p>
+                <p>Desenvolvido por <a href="https://redesigner.com.br" target="_blank">Redesigner PPM</a></p>
             </div>
-            
-            <div class="mt-12 text-center">
-                <a href="https://www.google.com/maps/search/Morada+dos+Passaros+Jardim+Rosana" 
-                   target="_blank" 
-                   class="inline-flex items-center gap-3 bg-white border border-slate-200 text-slate-700 px-8 py-4 rounded-full hover:bg-slate-50 transition shadow-md font-bold text-sm uppercase tracking-wide">
-                    <svg width="18" height="18" viewBox="0 0 24 24">
-                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
-                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.66l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.34-4.53z" fill="#EA4335"/>
-                    </svg>
-                    Ler todas as avaliações no Google
-                </a>
-            </div>
-        </div>
-    </section>
-    
-    <section id="faq" class="reveal section-padding bg-white">
-        <div class="max-w-3xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-12 text-center">Perguntas Frequentes</h2>
-
-            <div class="space-y-4">
-                <details class="group bg-gray-50 rounded-2xl p-6 border border-gray-100 cursor-pointer">
-                    <summary class="font-bold text-slate-800 list-none flex justify-between items-center gap-4">
-                        Preciso agendar horário para banho e tosa?
-                        <span class="text-orange-500 shrink-0 transition-transform group-open:rotate-180">▼</span>
-                    </summary>
-                    <p class="mt-4 text-sm text-slate-600 leading-relaxed">Recomendamos agendar pelo WhatsApp para garantir seu horário, mas também atendemos pets sem hora marcada conforme a disponibilidade do dia.</p>
-                </details>
-
-                <details class="group bg-gray-50 rounded-2xl p-6 border border-gray-100 cursor-pointer">
-                    <summary class="font-bold text-slate-800 list-none flex justify-between items-center gap-4">
-                        A clínica veterinária funciona 24h?
-                        <span class="text-orange-500 shrink-0 transition-transform group-open:rotate-180">▼</span>
-                    </summary>
-                    <p class="mt-4 text-sm text-slate-600 leading-relaxed">Sim, nossa clínica oferece atendimento veterinário 24 horas para emergências e consultas.</p>
-                </details>
-
-                <details class="group bg-gray-50 rounded-2xl p-6 border border-gray-100 cursor-pointer">
-                    <summary class="font-bold text-slate-800 list-none flex justify-between items-center gap-4">
-                        Como funciona o Táxi Dog?
-                        <span class="text-orange-500 shrink-0 transition-transform group-open:rotate-180">▼</span>
-                    </summary>
-                    <p class="mt-4 text-sm text-slate-600 leading-relaxed">Buscamos e levamos seu pet em casa para banho, tosa ou consulta. Chame no WhatsApp para verificar disponibilidade na sua região.</p>
-                </details>
-
-                <details class="group bg-gray-50 rounded-2xl p-6 border border-gray-100 cursor-pointer">
-                    <summary class="font-bold text-slate-800 list-none flex justify-between items-center gap-4">
-                        Vocês fazem delivery de ração e produtos?
-                        <span class="text-orange-500 shrink-0 transition-transform group-open:rotate-180">▼</span>
-                    </summary>
-                    <p class="mt-4 text-sm text-slate-600 leading-relaxed">Sim! Faça seu pedido direto pelo WhatsApp e receba em casa no Jardim Rosana e região.</p>
-                </details>
-
-                <details class="group bg-gray-50 rounded-2xl p-6 border border-gray-100 cursor-pointer">
-                    <summary class="font-bold text-slate-800 list-none flex justify-between items-center gap-4">
-                        Quais formas de pagamento vocês aceitam?
-                        <span class="text-orange-500 shrink-0 transition-transform group-open:rotate-180">▼</span>
-                    </summary>
-                    <p class="mt-4 text-sm text-slate-600 leading-relaxed">Aceitamos Pix, cartão de crédito, débito e dinheiro.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 px-4 bg-orange-500 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
-        
-        <div class="max-w-4xl mx-auto text-center relative z-10 text-white">
-            <h2 class="text-3xl md:text-5xl font-heading font-bold mb-6">Seu pet merece o melhor!</h2>
-            <p class="text-xl opacity-90 mb-10">Não deixe para depois. Agende um banho ou peça aquela ração agora mesmo.</p>
-            
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://wa.me/5511991895580" class="bg-white text-orange-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:bg-gray-100 transition transform hover:-translate-y-1">
-                    Chamar no WhatsApp
-                </a>
-            </div>
-        </div>
-    </section>
-    </main>
-
-    <footer class="bg-slate-900 text-slate-300 py-16 px-4 border-t-4 border-orange-500">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-10">
-            <div>
-                <div class="flex items-center gap-3 mb-6">
-                    <img src="logo.png" alt="Logo Footer" class="h-12 w-auto opacity-80">
-                    <div class="font-bold text-white text-lg">Morada dos Pássaros</div>
-                </div>
-                <p class="text-sm opacity-70">Cuidando com amor e profissionalismo de quem você mais ama. Referência no Jardim Rosana.</p>
-            </div>
-            
-            <div>
-                <h4 class="text-white font-bold mb-4">Acesso Rápido</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="banho-tosa.html" class="hover:text-orange-400 transition">Banho e Tosa</a></li>
-                    <li><a href="clinica.html" class="hover:text-orange-400 transition">Clínica Veterinária</a></li>
-                    <li><a href="delivery.html" class="hover:text-orange-400 transition">Delivery</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="text-white font-bold mb-4">Contato</h4>
-                <ul class="space-y-2 text-sm">
-                    <li>📍 Av. Carlos Lacerda, 1758 - Jd. Rosana, São Paulo - SP, 05789-001</li>
-                    <li>📞 (11) 99189-5580</li>
-                    <li>📧 contato@moradadospassaros.com.br</li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="text-white font-bold mb-4">Redes Sociais</h4>
-                <div class="flex gap-4">
-                    <a href="https://www.instagram.com/moradadospassaros_jardimrosana/" target="_blank" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-orange-500 hover:text-white transition group" aria-label="Instagram">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                    </a>
-                   <a href="https://wa.me/5511991895580" target="_blank" 
-       class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center hover:bg-[#25D366] text-white transition-all duration-300 group" 
-       aria-label="WhatsApp">
-        <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-    </a>
-                </div>
-            </div>
-        </div>
-        <div class="max-w-7xl mx-auto text-center mt-12 pt-8 border-t border-slate-800 text-xs opacity-40">
-            &copy; 2026 Pet Shop Morada dos Pássaros. Todos os direitos reservados - Desenvolvido por <a href="https://redesigner.com.br" target="_blank" class="hover:text-orange-400 transition">Redesigner PPM</a>
         </div>
     </footer>
 
-    <div id="lgpd-modal" class="fixed bottom-0 left-0 w-full z-50 p-4 hidden">
-        <div class="max-w-4xl mx-auto bg-white/90 backdrop-blur-md border border-orange-100 rounded-2xl shadow-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 lgpd-slide-up">
-            <div class="text-sm text-slate-600">
-                <h5 class="font-bold text-slate-900 text-lg mb-2">Sua privacidade importa 🍪</h5>
-                <p>Utilizamos cookies para melhorar sua experiência e para fins de marketing. Ao continuar navegando, você concorda com nossos <a href="termos.html" class="text-orange-600 underline font-bold hover:text-orange-700">Termos de Uso</a> e <a href="privacidade.html" class="text-orange-600 underline font-bold hover:text-orange-700">Política de Privacidade</a>.</p>
+    <!-- LGPD Banner -->
+    <div id="lgpd-modal" class="lgpd-banner" hidden>
+        <div class="lgpd-content">
+            <div class="lgpd-text">
+                <h5>Sua privacidade importa 🍪</h5>
+                <p>Utilizamos cookies para melhorar sua experiência e para fins de marketing. Ao continuar navegando, você concorda com nossos <a href="termos.html">Termos de Uso</a> e <a href="privacidade.html">Política de Privacidade</a>.</p>
             </div>
-            <div class="flex gap-4 w-full md:w-auto">
-                <button id="btn-aceitar-lgpd" class="flex-1 md:flex-none bg-orange-500 text-white px-8 py-3 rounded-xl font-bold hover:bg-orange-600 transition shadow-lg text-center whitespace-nowrap">
-                    Aceitar e Fechar
-                </button>
-            </div>
+            <button id="btn-aceitar-lgpd" class="btn-lgpd">Aceitar e Fechar</button>
         </div>
     </div>
 
+    <!-- WhatsApp Float -->
     <a href="https://wa.me/5511991895580?text=Olá! Vim pelo site." 
-       class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl z-40 pulse-animation flex items-center justify-center hover:bg-[#20ba5a] transition-all duration-300"
+       class="whatsapp-float" 
        aria-label="Falar no WhatsApp">
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
-    <script>
-        // Menu Mobile Toggle
-        const btn = document.getElementById('hamburguer');
-        const menu = document.getElementById('mobile-menu');
-        
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
 
-        // Fechar menu ao clicar em links
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
-
-        // LGPD Logic
-        document.addEventListener("DOMContentLoaded", function() {
-            const lgpdModal = document.getElementById('lgpd-modal');
-            const btnAceitar = document.getElementById('btn-aceitar-lgpd');
-            
-            if (!localStorage.getItem('lgpd_accepted')) {
-                setTimeout(() => {
-                    lgpdModal.classList.remove('hidden');
-                }, 1000);
-            }
-
-            btnAceitar.addEventListener('click', () => {
-                localStorage.setItem('lgpd_accepted', 'true');
-                lgpdModal.classList.add('hidden');
-            });
-        });
-
-        // Scroll Reveal
-        document.addEventListener("DOMContentLoaded", function() {
-            const revealEls = document.querySelectorAll('.reveal');
-
-            if (!('IntersectionObserver' in window)) {
-                revealEls.forEach(el => el.classList.add('is-visible'));
-                return;
-            }
-
-            const revealObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.15 });
-
-            revealEls.forEach(el => revealObserver.observe(el));
-        });
-    </script>
+    <script src="js/script.js" defer></script>
 </body>
 </html>
