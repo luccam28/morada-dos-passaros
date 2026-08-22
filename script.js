@@ -1,0 +1,91 @@
+(function() {
+    'use strict';
+
+    // ============================================================
+    // 1. MENU MOBILE
+    // ============================================================
+    const menuToggle = document.getElementById('hamburguer');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', function(e) {
+            const isOpen = mobileMenu.hasAttribute('hidden');
+            if (isOpen) {
+                mobileMenu.removeAttribute('hidden');
+                menuToggle.setAttribute('aria-expanded', 'true');
+            } else {
+                mobileMenu.setAttribute('hidden', '');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Fechar ao clicar em links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.setAttribute('hidden', '');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Fechar ao clicar fora
+        document.addEventListener('click', function(e) {
+            if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                mobileMenu.setAttribute('hidden', '');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
+    // ============================================================
+    // 2. LGPD CONSENT
+    // ============================================================
+    const lgpdModal = document.getElementById('lgpd-modal');
+    const btnAceitar = document.getElementById('btn-aceitar-lgpd');
+
+    if (lgpdModal && btnAceitar) {
+        const lgpdKey = 'lgpd_accepted';
+
+        if (!localStorage.getItem(lgpdKey)) {
+            setTimeout(() => {
+                lgpdModal.removeAttribute('hidden');
+            }, 1200);
+        }
+
+        btnAceitar.addEventListener('click', function() {
+            localStorage.setItem(lgpdKey, 'true');
+            lgpdModal.setAttribute('hidden', '');
+        });
+    }
+
+    // ============================================================
+    // 3. SCROLL REVEAL (Intersection Observer)
+    // ============================================================
+    const revealElements = document.querySelectorAll('.reveal');
+
+    if ('IntersectionObserver' in window && revealElements.length) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        revealElements.forEach(el => observer.observe(el));
+    } else {
+        revealElements.forEach(el => el.classList.add('is-visible'));
+    }
+
+    // ============================================================
+    // 4. FAQ: ícone rotativo (opcional, já tratado via CSS)
+    // ============================================================
+    // O CSS já trata a rotação do ícone com [open]
+    // Nada adicional necessário.
+
+    // ============================================================
+    // 5. SUAVIZAR ANCORAS (opcional, já feito com scroll-behavior)
+    // ============================================================
+    // O CSS já possui scroll-behavior: smooth.
+
+})();
