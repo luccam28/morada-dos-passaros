@@ -188,7 +188,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 6rem;
+    height: 7rem;  /* ALTERADO: era 6rem */
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 var(--space-4);
@@ -201,7 +201,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .logo-img {
-    height: 3.5rem;
+    height: 4.5rem;  /* ALTERADO: era 3.5rem */
     width: auto;
     object-fit: contain;
     transition: transform 0.2s;
@@ -311,7 +311,7 @@ h1, h2, h3, h4, h5, h6 {
     border-top: 1px solid rgba(249, 115, 22, 0.2);
     padding: var(--space-6);
     position: absolute;
-    top: 6rem;
+    top: 7rem;  /* ALTERADO: era 6rem */
     left: 0;
     right: 0;
     box-shadow: var(--shadow-xl);
@@ -361,7 +361,7 @@ h1, h2, h3, h4, h5, h6 {
    6. HERO
    ============================================================ */
 .hero {
-    padding-top: 8rem;
+    padding-top: 9rem;  /* ALTERADO: era 8rem */
     position: relative;
     overflow: hidden;
     background: rgba(255, 247, 237, 0.5);
