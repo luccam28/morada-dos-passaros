@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# O 404.html usa <meta name="robots" content="noindex">, por isso não é bloqueado aqui
+# (bloquear impediria o Google de ler o noindex).
+
 Sitemap: https://moradadospassaros.com.br/sitemap.xml
